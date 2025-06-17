@@ -640,6 +640,8 @@ u8 BattleSetup_GetEnvironmentId(void)
         return BATTLE_ENVIRONMENT_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
         return BATTLE_ENVIRONMENT_SAND;
+    if (MetatileBehavior_IsWet(tileBehavior))
+        return BATTLE_ENVIRONMENT_POND;
 
     switch (gMapHeader.mapType)
     {

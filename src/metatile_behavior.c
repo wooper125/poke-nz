@@ -4,7 +4,8 @@
 
 #define TILE_FLAG_HAS_ENCOUNTERS (1 << 0)
 #define TILE_FLAG_SURFABLE       (1 << 1)
-#define TILE_FLAG_UNUSED         (1 << 2) // Roughly all of the traversable metatiles. Set but never read
+#define TILE_FLAG_WET            (1 << 2)
+#define TILE_FLAG_UNUSED         (1 << 3) // Roughly all of the traversable metatiles. Set but never read
 
 static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
 {
@@ -28,8 +29,8 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_WATERFALL]                          = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_SOOTOPOLIS_DEEP_WATER]              = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_OCEAN_WATER]                        = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_PUDDLE]                             = TILE_FLAG_UNUSED,
-    [MB_SHALLOW_WATER]                      = TILE_FLAG_UNUSED,
+    [MB_PUDDLE]                             = TILE_FLAG_UNUSED | TILE_FLAG_WET | TILE_FLAG_HAS_ENCOUNTERS,
+    [MB_SHALLOW_WATER]                      = TILE_FLAG_UNUSED | TILE_FLAG_WET | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_NO_SURFACING]                       = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_STAIRS_OUTSIDE_ABANDONED_SHIP]      = TILE_FLAG_UNUSED,
     [MB_SHOAL_CAVE_ENTRANCE]                = TILE_FLAG_UNUSED,
@@ -288,6 +289,14 @@ bool8 MetatileBehavior_IsDeepSouthWarp(u8 metatileBehavior)
 bool8 MetatileBehavior_IsSurfableWaterOrUnderwater(u8 metatileBehavior)
 {
     if ((sTileBitAttributes[metatileBehavior] & TILE_FLAG_SURFABLE))
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool8 MetatileBehavior_IsWet(u8 metatileBehavior)
+{
+    if ((sTileBitAttributes[metatileBehavior] & TILE_FLAG_WET))
         return TRUE;
     else
         return FALSE;
@@ -827,6 +836,7 @@ bool8 MetatileBehavior_IsBridgeOverWaterNoEdge(u8 metatileBehavior)
 bool8 MetatileBehavior_IsLandWildEncounter(u8 metatileBehavior)
 {
     if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == FALSE
+     && MetatileBehavior_IsWet(metatileBehavior) == FALSE
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
         return TRUE;
     else
@@ -835,7 +845,8 @@ bool8 MetatileBehavior_IsLandWildEncounter(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsWaterWildEncounter(u8 metatileBehavior)
 {
-    if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == TRUE
+    if ((MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior) == TRUE
+     || MetatileBehavior_IsWet(metatileBehavior) == TRUE)
      && MetatileBehavior_IsEncounterTile(metatileBehavior) == TRUE)
         return TRUE;
     else
