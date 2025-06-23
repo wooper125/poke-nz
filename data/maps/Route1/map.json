@@ -12,9 +12,29 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_KAWAKAWA_INLET",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_KAWAKAWA_INLET",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
   "object_events": [],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Route1_EventScript_NewSign"
+    }
+  ]
 }

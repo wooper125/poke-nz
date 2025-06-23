@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAWAKAWA_INLET",
+      "name": "KawakawaInlet_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/KawakawaInlet/border.bin",
+      "blockdata_filepath": "data/layouts/KawakawaInlet/map.bin"
     }
   ]
 }

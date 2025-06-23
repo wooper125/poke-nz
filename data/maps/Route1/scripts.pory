@@ -1,0 +1,10 @@
+raw `
+Route1_MapScripts::
+	.byte 0
+
+`
+script Route1_EventScript_NewSign {
+    lockall
+    msgbox("Hello World")
+    releaseall
+}
