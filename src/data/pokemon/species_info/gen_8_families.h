@@ -1717,10 +1717,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .height = 6,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "Its curly fleece is such an effective\n"
-            "cushion that this Pokémon could fall off\n"
-            "a cliff and stand right back up at the\n"
-            "bottom, unharmed."),
+             "Its curly fleece is such an effective\n"
+             "cushion that this Pokémon could fall off\n"
+             "a cliff and stand right back up at the\n"
+             "bottom, unharmed."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,

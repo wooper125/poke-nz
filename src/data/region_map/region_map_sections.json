@@ -58,7 +58,7 @@
     },
     {
       "id": "MAPSEC_PETALBURG_CITY",
-      "name": "PETALBURG CITY",
+      "name": "POHUTU CITY",
       "x": 3,
       "y": 11,
       "width": 1,
@@ -474,7 +474,7 @@
     },
     {
       "id": "MAPSEC_PETALBURG_WOODS",
-      "name": "PETALBURG WOODS",
+      "name": "KAURI WOODS",
       "x": 4,
       "y": 12,
       "width": 1,
@@ -834,7 +834,7 @@
     {
       "id": "MAPSEC_ROUTE_4",
       "name": "ROUTE 4",
-      "x": 9,
+      "x": 6,
       "y": 7,
       "width": 2,
       "height": 1
@@ -842,10 +842,10 @@
     {
       "id": "MAPSEC_ROUTE_5",
       "name": "ROUTE 5",
-      "x": 12,
-      "y": 5,
-      "width": 1,
-      "height": 3
+      "x": 9,
+      "y": 7,
+      "width": 2,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_6",
@@ -972,16 +972,16 @@
       "name": "ROUTE 21",
       "x": 5,
       "y": 7,
-      "width": 3,
-      "height": 1
+      "width": 1,
+      "height": 4
     },
     {
       "id": "MAPSEC_ROUTE_22",
       "name": "ROUTE 22",
-      "x": 5,
-      "y": 7,
-      "width": 1,
-      "height": 4
+      "x": 2,
+      "y": 10,
+      "width": 3,
+      "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_23",

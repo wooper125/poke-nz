@@ -26735,3 +26735,10 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
+
+    const u32 gMonFrontPic_Lambud[] = INCBIN_U32("graphics/pokemon/lambud/anim_front.4bpp.lz");
+    const u32 gMonBackPic_Lambud[] = INCBIN_U32("graphics/pokemon/lambud/back.4bpp.lz");
+    const u16 gMonPalette_Lambud[] = INCBIN_U16("graphics/pokemon/lambud/normal.gbapal");
+    const u16 gMonShinyPalette_Lambud[] = INCBIN_U16("graphics/pokemon/lambud/shiny.gbapal");
+    const u8 gMonIcon_Lambud[] = INCBIN_U8("graphics/pokemon/lambud/icon.4bpp");
+    const u8 gMonFootprint_Lambud[] = INCBIN_U8("graphics/pokemon/lambud/footprint.1bpp");

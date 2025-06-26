@@ -94,7 +94,12 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "Route1",
-    "KawakawaInlet"
+    "KawakawaInlet",
+    "Route23",
+    "PohutuCity",
+    "Route22",
+    "Route1_2",
+    "PohutuCity_2"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -431,7 +436,8 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "KauriWoods"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

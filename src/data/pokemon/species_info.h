@@ -175,6 +175,142 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 1,
     },
 
+    [SPECIES_LAMBUD] =
+    {
+        .baseHP        = 56,
+        .baseAttack    = 56,
+        .baseDefense   = 49,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 38,
+        .baseSpDefense = 61,
+        .types = MON_TYPES(TYPE_GRASS),
+        .catchRate = 45,
+        .expYield = 64,
+        .evYield_SpDefense  = 1,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_FLUFFY },
+        .bodyColor = BODY_COLOR_GREEN,
+        .speciesName = _("Lambud"),
+        .cryId = CRY_LAMBUD,
+        .natDexNum = NATIONAL_DEX_LAMBUD,
+        .categoryName = _("Lamb"),
+        .height = 6,
+        .weight = 60,
+        .description = COMPOUND_STRING(
+            "Its budding wool-like coat forms a cushion\n"
+            "allowing it to tumble down rocky cliffs and\n"
+            "This Pokémon thrives in extreme alpine\n"
+            "environments, and are very friendly."),
+        .pokemonScale = 422,
+        .pokemonOffset = 12,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Lambud,
+        .frontPicSize = MON_COORDS_SIZE(40, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 30),
+            ANIMCMD_FRAME(1, 30),
+            ANIMCMD_FRAME(0, 1),
+        ),
+        .frontAnimId = ANIM_V_JUMPS_H_JUMPS,
+        .backPic = gMonBackPic_Lambud,
+        .backPicSize = MON_COORDS_SIZE(56, 32),
+        .backPicYOffset = 18,
+        .backAnimId = BACK_ANIM_NONE,
+        .palette = gMonPalette_Lambud,
+        .shinyPalette = gMonShinyPalette_Lambud,
+        .iconSprite = gMonIcon_Lambud,
+        .iconPalIndex = 4,
+        // .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
+        // SHADOW(1, -1, SHADOW_SIZE_S)
+        FOOTPRINT(Lambud)
+        // OVERWORLD(
+        //     sPicTable_Bulbasaur,
+        //     SIZE_32x32,
+        //     SHADOW_SIZE_M,
+        //     TRACKS_FOOT,
+        //     sAnimTable_Following,
+        //     gOverworldPalette_Bulbasaur,
+        //     gShinyOverworldPalette_Bulbasaur
+        // )
+        .levelUpLearnset = sBulbasaurLevelUpLearnset,
+        .teachableLearnset = sBulbasaurTeachableLearnset,
+        // .eggMoveLearnset = sBulbasaurEggMoveLearnset,
+        // .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR}),
+        // //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
+        // .backPic = gMonBackPic_Wooloo,
+        // .backPicSize = MON_COORDS_SIZE(56, 32),
+        // .backPicYOffset = 18,
+        // //.backAnimId = BACK_ANIM_NONE,
+        // .palette = gMonPalette_Wooloo,
+        // .shinyPalette = gMonShinyPalette_Wooloo,
+        // .iconSprite = gMonIcon_Wooloo,
+        // .iconPalIndex = 0,
+        // .pokemonJumpType = PKMN_JUMP_TYPE_NORMAL,
+        // SHADOW(1, 1, SHADOW_SIZE_S)
+        // FOOTPRINT(Wooloo)
+        // OVERWORLD(
+        //     sPicTable_Wooloo,
+        //     SIZE_32x32,
+        //     SHADOW_SIZE_M,
+        //     TRACKS_FOOT,
+        //     sAnimTable_Following,
+        //     gOverworldPalette_Wooloo,
+        //     gShinyOverworldPalette_Wooloo
+        // )
+        // .levelUpLearnset = sWoolooLevelUpLearnset,
+        // .teachableLearnset = sWoolooTeachableLearnset,
+        // .eggMoveLearnset = sWoolooEggMoveLearnset,
+        // .evolutions = EVOLUTION({EVO_LEVEL, 24, SPECIES_DUBWOOL}),
+        // .description = COMPOUND_STRING(
+        //     "Bulbasaur can be seen napping in bright\n"
+        //     "sunlight. There is a seed on its back.\n"
+        //     "By soaking up the sun's rays, the seed\n"
+        //     "grows progressively larger."),
+        // .pokemonScale = 356,
+        // .pokemonOffset = 17,
+        // .trainerScale = 256,
+        // .trainerOffset = 0,
+        // .frontPic = gMonFrontPic_Bulbasaur,
+        // .frontPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(32, 40) : MON_COORDS_SIZE(40, 40),
+        // .frontPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 14 : 13,
+        // .frontAnimFrames = ANIM_FRAMES(
+        //     ANIMCMD_FRAME(0, 30),
+        //     ANIMCMD_FRAME(1, 30),
+        //     ANIMCMD_FRAME(0, 1),
+        // ),
+        // .frontAnimId = ANIM_V_JUMPS_H_JUMPS,
+        // .backPic = gMonBackPic_Bulbasaur,
+        // .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(48, 32) : MON_COORDS_SIZE(56, 40),
+        // .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 16 : 13,
+        // .backAnimId = BACK_ANIM_DIP_RIGHT_SIDE,
+        // .palette = gMonPalette_Bulbasaur,
+        // .shinyPalette = gMonShinyPalette_Bulbasaur,
+        // .iconSprite = gMonIcon_Bulbasaur,
+        // .iconPalIndex = P_GBA_STYLE_SPECIES_ICONS ? 1 : 4,
+        // .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
+        // SHADOW(1, -1, SHADOW_SIZE_S)
+        // FOOTPRINT(Bulbasaur)
+        // OVERWORLD(
+        //     sPicTable_Bulbasaur,
+        //     SIZE_32x32,
+        //     SHADOW_SIZE_M,
+        //     TRACKS_FOOT,
+        //     sAnimTable_Following,
+        //     gOverworldPalette_Bulbasaur,
+        //     gShinyOverworldPalette_Bulbasaur
+        // )
+        // .levelUpLearnset = sBulbasaurLevelUpLearnset,
+        // .teachableLearnset = sBulbasaurTeachableLearnset,
+        // .eggMoveLearnset = sBulbasaurEggMoveLearnset,
+        // .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR}),
+    },
+
     /* You may add any custom species below this point based on the following structure: */
 
     /*

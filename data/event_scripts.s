@@ -1161,3 +1161,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route1/scripts.inc"
 
 	.include "data/maps/KawakawaInlet/scripts.inc"
+
+	.include "data/maps/Route23/scripts.inc"
+
+	.include "data/maps/PohutuCity/scripts.inc"
+
+	.include "data/maps/Route22/scripts.inc"
+
+	.include "data/maps/KauriWoods/scripts.inc"
+
+	.include "data/maps/Route1_2/scripts.inc"
+
+	.include "data/maps/PohutuCity_2/scripts.inc"

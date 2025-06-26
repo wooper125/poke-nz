@@ -4414,22 +4414,82 @@
     {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 82,
+      "height": 28,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
     },
     {
       "id": "LAYOUT_KAWAKAWA_INLET",
       "name": "KawakawaInlet_Layout",
-      "width": 20,
+      "width": 44,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/KawakawaInlet/border.bin",
       "blockdata_filepath": "data/layouts/KawakawaInlet/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE23",
+      "name": "Route23_Layout",
+      "width": 42,
+      "height": 57,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/Route23/border.bin",
+      "blockdata_filepath": "data/layouts/Route23/map.bin"
+    },
+    {
+      "id": "LAYOUT_POHUTU_CITY",
+      "name": "PohutuCity_Layout",
+      "width": 38,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/PohutuCity/border.bin",
+      "blockdata_filepath": "data/layouts/PohutuCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE22",
+      "name": "Route22_Layout",
+      "width": 100,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/Route22/border.bin",
+      "blockdata_filepath": "data/layouts/Route22/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAURI_WOODS",
+      "name": "KauriWoods_Layout",
+      "width": 48,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/KauriWoods/border.bin",
+      "blockdata_filepath": "data/layouts/KauriWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_2",
+      "name": "Route1_2_Layout",
+      "width": 82,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/Route1_2/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_POHUTU_CITY_2",
+      "name": "PohutuCity_2_Layout",
+      "width": 38,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Kawakawa",
+      "border_filepath": "data/layouts/PohutuCity_2/border.bin",
+      "blockdata_filepath": "data/layouts/PohutuCity_2/map.bin"
     }
   ]
 }

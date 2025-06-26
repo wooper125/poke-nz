@@ -14,21 +14,18 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE1",
+      "map": "MAP_ROUTE23",
       "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE1_2",
+      "offset": -15,
       "direction": "right"
     }
   ],
   "object_events": [],
-  "warp_events": [
-    {
-      "x": 4,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE101",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }
