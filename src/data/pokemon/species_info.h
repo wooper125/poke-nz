@@ -201,10 +201,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .height = 6,
         .weight = 60,
         .description = COMPOUND_STRING(
-            "Its budding wool-like coat forms a cushion\n"
-            "allowing it to tumble down rocky cliffs and\n"
-            "This Pokémon thrives in extreme alpine\n"
-            "environments, and are very friendly."),
+            "Its budding matted coat acts as a cushion,\n"
+            "allowing it to tumble down rocky cliffs\n"
+            "unscathed. This Pokémon thrives in\n"
+            "extreme alpine environments."),
         .pokemonScale = 422,
         .pokemonOffset = 12,
         .trainerScale = 256,
@@ -225,7 +225,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .palette = gMonPalette_Lambud,
         .shinyPalette = gMonShinyPalette_Lambud,
         .iconSprite = gMonIcon_Lambud,
-        .iconPalIndex = 4,
+        .iconPalIndex = 5,
         // .pokemonJumpType = PKMN_JUMP_TYPE_SLOW,
         // SHADOW(1, -1, SHADOW_SIZE_S)
         FOOTPRINT(Lambud)
@@ -238,8 +238,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         //     gOverworldPalette_Bulbasaur,
         //     gShinyOverworldPalette_Bulbasaur
         // )
-        .levelUpLearnset = sBulbasaurLevelUpLearnset,
-        .teachableLearnset = sBulbasaurTeachableLearnset,
+        .levelUpLearnset = sLambudLevelUpLearnset,
+        .teachableLearnset = sLambudTeachableLearnset,
         // .eggMoveLearnset = sBulbasaurEggMoveLearnset,
         // .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR}),
         // //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,

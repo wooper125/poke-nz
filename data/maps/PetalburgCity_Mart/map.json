@@ -73,14 +73,14 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_POHUTU_CITY",
+      "dest_map": "MAP_POHUTU_CITY_2",
       "dest_warp_id": "1"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_POHUTU_CITY",
+      "dest_map": "MAP_POHUTU_CITY_2",
       "dest_warp_id": "1"
     }
   ],
