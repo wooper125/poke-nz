@@ -35861,5 +35861,7 @@ static const u16 sLambudTeachableLearnset[] = {
     MOVE_SNORE,
     MOVE_STRENGTH,
     MOVE_SWAGGER,
+    MOVE_DEFENSE_CURL,
+    MOVE_ROLLOUT,
     MOVE_UNAVAILABLE,
 };
