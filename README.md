@@ -52,10 +52,12 @@ If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull r
 
 Our community uses the [Rom Hacking Hideout (RHH) Discord server](https://discord.gg/6CzjAG6GZk) to communicate and organize. Most of our discussions take place there, and we welcome anybody to join us!
 # About this branch
-This branch adds 3 new pockets to the bag based on changes to it from later generations:
+This branch adds 5 new pockets to the bag based on changes to it from later generations:
 * Medicine (HP, PP and status recovery items)
-* Power-Up (Vitamins and evolution items)
+* Power-Up (Evolution Items, Vitamins, Mints, Candies)
 * Battle Items (X items, Pokédoll/FluffyTail and hold items with battle effects)
+* Mega Stones
+* Z-Crystals
 
 The new order for the pockets is the following:
 * Items
@@ -64,13 +66,12 @@ The new order for the pockets is the following:
 * Battle Items
 * Berries
 * Power-Up
+* Mega Stones
+* Z-Crystals
 * TMs & HMs
 * Key Items
 
-However, it reuses the original pocket sprites until I'm able to get new ones for the new pockets.
-
-To-Do:
-* New bag sprites.
+However, it reuses the original pocket sprites.
 
 # Pokémon Emerald
 
