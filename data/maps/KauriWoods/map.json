@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 19,
-      "y": 10,
+      "x": 40,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -29,7 +29,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 19,
+      "x": 25,
       "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -43,7 +43,7 @@
     {
       "local_id": "LOCALID_PETALBURG_WOODS_GRUNT",
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
-      "x": 26,
+      "x": 32,
       "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -57,7 +57,7 @@
     {
       "local_id": "LOCALID_PETALBURG_WOODS_DEVON_EMPLOYEE",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 26,
+      "x": 32,
       "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -70,7 +70,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 45,
+      "x": 51,
       "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -83,7 +83,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 35,
+      "x": 41,
       "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -96,7 +96,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 4,
+      "x": 10,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -109,7 +109,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 15,
+      "x": 21,
       "y": 19,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -122,7 +122,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 11,
+      "x": 17,
       "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -135,7 +135,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 4,
+      "x": 10,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_UP_AND_RIGHT",
@@ -148,8 +148,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
-      "x": 30,
-      "y": 34,
+      "x": 39,
+      "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -161,7 +161,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 4,
+      "x": 10,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -174,8 +174,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 33,
-      "y": 5,
+      "x": 39,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -188,28 +188,28 @@
   ],
   "warp_events": [
     {
-      "x": 6,
+      "x": 12,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
-      "x": 7,
+      "x": 13,
       "y": 36,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
-      "x": 46,
+      "x": 52,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ROUTE104",
       "dest_warp_id": "6"
     },
     {
-      "x": 47,
+      "x": 53,
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ROUTE104",
@@ -219,7 +219,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 26,
+      "x": 32,
       "y": 23,
       "elevation": 3,
       "var": "VAR_PETALBURG_WOODS_STATE",
@@ -228,7 +228,7 @@
     },
     {
       "type": "trigger",
-      "x": 27,
+      "x": 33,
       "y": 23,
       "elevation": 3,
       "var": "VAR_PETALBURG_WOODS_STATE",
@@ -239,7 +239,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
+      "x": 20,
       "y": 32,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -247,7 +247,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 39,
+      "x": 45,
       "y": 35,
       "elevation": 3,
       "item": "ITEM_POTION",
@@ -255,7 +255,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 26,
+      "x": 36,
       "y": 6,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
@@ -263,7 +263,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 37,
+      "x": 43,
       "y": 31,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
@@ -271,15 +271,15 @@
     },
     {
       "type": "hidden_item",
-      "x": 4,
-      "y": 19,
+      "x": 15,
+      "y": 21,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POKE_BALL"
     },
     {
       "type": "sign",
-      "x": 11,
+      "x": 17,
       "y": 8,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

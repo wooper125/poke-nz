@@ -4464,10 +4464,10 @@
     {
       "id": "LAYOUT_KAURI_WOODS",
       "name": "KauriWoods_Layout",
-      "width": 48,
+      "width": 54,
       "height": 44,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Kawakawa",
+      "secondary_tileset": "gTileset_Kauri",
       "border_filepath": "data/layouts/KauriWoods/border.bin",
       "blockdata_filepath": "data/layouts/KauriWoods/map.bin"
     },
@@ -4490,6 +4490,26 @@
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/PohutuCity_2/border.bin",
       "blockdata_filepath": "data/layouts/PohutuCity_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAWAKAWA_INLET_MCHOUSE_1F",
+      "name": "KawakawaInlet_MCHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/KawakawaInlet_MCHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/KawakawaInlet_MCHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAWAKAWA_INLET_MCHOUSE_2F",
+      "name": "KawakawaInlet_MCHouse_2F_Layout",
+      "width": 9,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/KawakawaInlet_MCHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/KawakawaInlet_MCHouse_2F/map.bin"
     }
   ]
 }

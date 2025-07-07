@@ -210,3 +210,6 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 const u16 gMetatiles_Kawakawa[] = INCBIN_U16("data/tilesets/secondary/kawakawa/metatiles.bin");
 const u16 gMetatileAttributes_Kawakawa[] = INCBIN_U16("data/tilesets/secondary/kawakawa/metatile_attributes.bin");
+
+const u16 gMetatiles_Kauri[] = INCBIN_U16("data/tilesets/secondary/kauri/metatiles.bin");
+const u16 gMetatileAttributes_Kauri[] = INCBIN_U16("data/tilesets/secondary/kauri/metatile_attributes.bin");

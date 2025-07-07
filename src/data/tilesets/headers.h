@@ -841,3 +841,14 @@ const struct Tileset gTileset_Kawakawa =
     .metatileAttributes = gMetatileAttributes_Kawakawa,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Kauri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Kauri,
+    .palettes = gTilesetPalettes_Kauri,
+    .metatiles = gMetatiles_Kauri,
+    .metatileAttributes = gMetatileAttributes_Kauri,
+    .callback = NULL,
+};

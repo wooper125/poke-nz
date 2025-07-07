@@ -33,7 +33,8 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_IndoorKawakawa"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -628,5 +629,9 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_IndoorKawakawa": [
+    "KawakawaInlet_MCHouse_1F",
+    "KawakawaInlet_MCHouse_2F"
   ]
 }

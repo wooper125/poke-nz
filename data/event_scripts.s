@@ -1173,3 +1173,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route1_2/scripts.inc"
 
 	.include "data/maps/PohutuCity_2/scripts.inc"
+
+	.include "data/maps/KawakawaInlet_MCHouse_1F/scripts.inc"
+
+	.include "data/maps/KawakawaInlet_MCHouse_2F/scripts.inc"
