@@ -1,6 +1,10 @@
+mapscripts KawakawaInlet_MapScripts {}
+
 script KawakawaInletSign {
     # a sign stating the towns name and a description
+    lock
     msgbox("KAWAKAWA INLET\n"
            "“The dawn of a thousand stories.”$")
+    release
+    end
 }
-
