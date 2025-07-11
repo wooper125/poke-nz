@@ -1,0 +1,6 @@
+script KawakawaInletSign {
+    # a sign stating the towns name and a description
+    msgbox("KAWAKAWA INLET\n"
+           "“The dawn of a thousand stories.”$")
+}
+
