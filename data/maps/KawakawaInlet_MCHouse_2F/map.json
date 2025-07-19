@@ -23,6 +23,16 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "0",
+      "script": "KawakawaInlet_MCHouse_2F_MapScripts"
+    }
+  ],
   "bg_events": []
 }

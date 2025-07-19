@@ -1,0 +1,67 @@
+mapscripts KawakawaInlet_MCHouse_1F_MapScripts {
+    MAP_SCRIPT_ON_LOAD: KawakawaInlet_MCHouse_1F_OnLoad
+    MAP_SCRIPT_ON_TRANSITION: KawakawaInlet_MCHouse_1F_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_KAWAKAWA_INTRO_STATE, 1: KawakawaInlet_MCHouse_1F_EventScript_HappyBirthday
+    ]
+}
+
+script KawakawaInlet_MCHouse_1F_OnLoad {
+
+}
+
+script KawakawaInlet_MCHouse_1F_OnTransition {
+
+}
+
+script KawakawaInlet_MCHouse_1F_EventScript_HappyBirthday {
+    lockall
+    playse(SE_PIN)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_OhComeQuickly)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_HappyBirthday)
+    closemessage
+    addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+}
+
+text KawakawaInlet_MCHouse_1F_Text_OhComeQuickly {
+    "MOM: Oh! {PLAYER}, you're up!\n"
+    "Quick! Come quickly!"
+}
+
+movement KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable {
+    walk_down * 2
+	walk_left * 3
+    walk_down
+    face_left
+}
+
+text KawakawaInlet_MCHouse_1F_Text_HappyBirthday {
+    format(
+        "MOM: Happy birthday {PLAYER}!\p"
+        "I won't keep you long, I'm sure you can't wait to get your first Pokémon!\p"
+        "Your dad's waiting for you by the boat, go on!"
+    )
+}
+
+text KawakawaInlet_MCHouse_1F_Text_GoOn {
+    format(
+        "Go on, your dad's waiting at the boat!"
+    )
+}
+
+script KawakawaInlet_MCHouse_1F_EventScript_Mom {
+	lock
+	faceplayer
+    if (!flag(FLAG_RECEIVED_STARTER)) {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_GoOn)
+    } elif (flag(FLAG_RECEIVED_STARTER)) {
+        goto(PlayersHouse_1F_EventScript_MomHealsParty)
+    } 
+	release
+    end
+}

@@ -1900,6 +1900,17 @@ static inline u32 GetCriticalHitOdds(u32 critChance)
     return sCriticalHitOdds[critChance];
 }
 
+static inline u32 IsBattlerLuckyPunchAffected(u32 battler, enum ItemHoldEffect holdEffect)
+{
+    if (holdEffect == HOLD_EFFECT_LUCKY_PUNCH)
+    {
+        return GET_BASE_SPECIES_ID(gBattleMons[battler].species) == SPECIES_HAPPINY
+            || gBattleMons[battler].species == SPECIES_CHANSEY
+            || gBattleMons[battler].species == SPECIES_BLISSEY;
+    }
+    return FALSE;
+}
+
 static inline u32 IsBattlerLeekAffected(u32 battler, enum ItemHoldEffect holdEffect)
 {
     if (holdEffect == HOLD_EFFECT_LEEK)
@@ -1920,7 +1931,7 @@ static inline u32 GetHoldEffectCritChanceIncrease(u32 battler, enum ItemHoldEffe
         critStageIncrease = 1;
         break;
     case HOLD_EFFECT_LUCKY_PUNCH:
-        if (gBattleMons[battler].species == SPECIES_CHANSEY)
+        if (IsBattlerLuckyPunchAffected(battler, holdEffect))
             critStageIncrease = 2;
         break;
     case HOLD_EFFECT_LEEK:
