@@ -4,9 +4,10 @@ mapscripts KawakawaInlet_MCHouse_2F_MapScripts {
 
 script KawakawaInlet_MCHouse_2F_EventScript_SetIntroFlags {
     lockall
-    if (var(VAR_KAWAKAWA_INTRO_STATE) == 0) {
+    if (!flag(FLAG_START)) {
         setrespawn(HEAL_LOCATION_KAWAKAWA_INLET_MCHOUSE_2F)
 	    setvar(VAR_KAWAKAWA_INTRO_STATE, 1)
     }
+    setflag(FLAG_START)
 	releaseall
 }
