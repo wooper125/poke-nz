@@ -1,4 +1,8 @@
-mapscripts KawakawaInlet_MapScripts {}
+mapscripts KawakawaInlet_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_LITTLEROOT_TOWN)
+    }
+}
 
 script KawakawaInletSign {
     # a sign stating the towns name and a description

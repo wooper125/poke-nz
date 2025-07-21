@@ -1,2 +1,148 @@
-mapscripts Route23_MapScripts {}
+mapscripts Route23_MapScripts {
 
+}
+
+script Route23_EventScript_Dad {
+    lock
+    faceplayer
+    if(var(VAR_KAWAKAWA_INTRO_STATE) == 2) {
+        checkplayergender
+        if(var(VAR_RESULT) == MALE) {
+            msgbox(Route23_Text_TheresMyBoy)
+        } else {
+            msgbox(Route23_Text_TheresMyGirl)
+        }
+        addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+    }
+    msgbox(Route23_Text_ReadyToSailYesNo, MSGBOX_YESNO)
+	if(var(VAR_RESULT) == NO) {
+        msgbox(Route23_Text_DeclineSailing)
+    } else {
+        msgbox(Route23_Text_LetsSail)
+        closemessage
+	    goto(Route23_EventScript_SailToPohutu)
+    }
+    closemessage
+	end
+}
+
+script Route23_EventScript_SailToPohutu {
+    lockall
+    setobjectsubpriority(LOCALID_ROUTE23_DAD, MAP_ROUTE23, 0)
+	setobjectsubpriority(LOCALID_PLAYER, MAP_ROUTE23, 0)
+    applymovement(LOCALID_ROUTE23_DAD, Route23_Movement_DadBoardBoat)
+	waitmovement(0)
+	removeobject(LOCALID_ROUTE23_DAD)
+	applymovement(LOCALID_PLAYER, Route23_Movement_PlayerBoardBoat)
+	waitmovement(0)
+	hideobjectat(LOCALID_PLAYER, MAP_ROUTE23)
+	call(Common_EventScript_PlayBrineysBoatMusic)
+    applymovement(LOCALID_ROUTE23_BOAT, Route23_Movement_SailToPohutu)
+	applymovement(LOCALID_PLAYER, Route23_Movement_SailToPohutu)
+    waitmovement(0)
+	goto(Route23_EventScript_ArriveInPohutu)
+    end
+}
+
+script Route23_EventScript_ArriveInPohutu {
+    delay(50)
+	applymovement(LOCALID_PLAYER, Route23_Movement_PlayerExitBoat)
+	waitmovement(0)
+	call(Common_EventScript_StopBrineysBoatMusic)
+	showobjectat(LOCALID_PLAYER, MAP_POHUTU_CITY)
+	applymovement(LOCALID_PLAYER, Route23_Movement_PlayerMoveForDad)
+	waitmovement(0)
+	setobjectxyperm(LOCALID_POHUTU_DAD, 15, 5)
+	addobject(LOCALID_POHUTU_DAD)
+	setobjectsubpriority(LOCALID_POHUTU_DAD, MAP_POHUTU_CITY, 0)
+	clearflag(FLAG_HIDE_POHUTU_CITY_DAD)
+	applymovement(LOCALID_POHUTU_DAD, Route23_Movement_DadExitBoat)
+	waitmovement(0)
+	addobject(LOCALID_POHUTU_BOAT)
+	clearflag(FLAG_HIDE_DAD_BOAT_POHUTU_CITY)
+	call(Common_EventScript_StopBrineysBoatMusic)
+	setflag(FLAG_HIDE_ROUTE_23_DAD_BOAT)
+	hideobjectat(LOCALID_ROUTE23_BOAT, MAP_ROUTE23)
+	copyvar(VAR_BRINEY_LOCATION, VAR_0x8008)
+	resetobjectsubpriority(LOCALID_PLAYER, MAP_ROUTE23)
+	resetobjectsubpriority(LOCALID_POHUTU_DAD, MAP_POHUTU_CITY)
+	copyobjectxytoperm(LOCALID_POHUTU_DAD)
+	setvar(VAR_BOARD_BRINEY_BOAT_STATE, 0)
+	goto(Route23_EventScript_LandedInPohutu)
+	end
+}
+
+script Route23_EventScript_LandedInPohutu {
+	msgbox(PohutuCity_Text_DadLandedInPohutu, MSGBOX_DEFAULT)
+	releaseall
+	end
+}
+
+movement Route23_Movement_SailToPohutu {
+    walk_right * 7
+    walk_up * 4
+    walk_fast_up * 4
+    walk_faster_up * 26
+    walk_fast_up * 4
+    walk_fast_right * 2
+    walk_faster_right * 44
+    walk_fast_right * 2
+    walk_fast_down * 4
+    walk_faster_down * 6
+    walk_fast_down * 4
+    walk_down * 2
+}
+
+movement Route23_Movement_PlayerBoardBoat {
+	walk_right * 2
+	walk_up
+}
+
+movement Route23_Movement_PlayerExitBoat {
+	walk_down
+}
+
+movement Route23_Movement_PlayerMoveForDad {
+	walk_right
+	walk_in_place_faster_left
+}
+
+movement Route23_Movement_DadBoardBoat {
+	walk_right
+	walk_up
+}
+
+movement Route23_Movement_DadExitBoat {
+	walk_down
+	walk_in_place_faster_right
+}
+
+text Route23_Text_TheresMyBoy {
+    format(
+        "There's my boy!\nI was wondering when you'd show up.\p"
+        "I'm sure you're really excited to get going!"
+        "I remember getting my first Pokémon...\p"
+        "Anyways, that's enough reminiscing, I shouldn't keep you waiting."
+    )
+}
+
+text Route23_Text_TheresMyGirl {
+    format(
+        "There's my girl!\nI was wondering when you'd show up.\p"
+        "I'm sure you're really excited to get going!"
+        "I remember getting my first Pokémon...\p"
+        "Anyways, that's enough reminiscing, I shouldn't keep you waiting."
+    )
+}
+
+text Route23_Text_ReadyToSailYesNo {
+    format("So, are you ready to sail kid?")
+}
+
+text Route23_Text_DeclineSailing {
+    format("No problem, just let me know when you want to get going.")
+}
+
+text Route23_Text_LetsSail {
+    format("Great! Let's get going!")
+}

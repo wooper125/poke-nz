@@ -1,0 +1,50 @@
+mapscripts PohutuCity_2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_VISITED_PETALBURG_CITY)
+    }
+}
+
+script PohutuCity_EventScript_Dad {
+	lock
+	faceplayer
+    if(!flag(FLAG_RECEIVED_STARTER)) {
+        msgbox(PohutuCity_Text_DadGetGoing)
+        closemessage
+    } else {
+        goto(PohutuCity_EventScript_DadLeaves)
+    }
+	end
+}
+
+script PohutuCity_EventScript_ChooseStarter {
+    if(!flag(FLAG_RECEIVED_STARTER)) {
+        special(ChooseStarter)
+        setflag(FLAG_RECEIVED_STARTER)
+    }
+    end
+}
+
+script PohutuCity_EventScript_DadLeaves {
+    msgbox(PohutuCity_Text_DadLeaves)
+    closemessage
+    end
+}
+
+text PohutuCity_Text_DadLandedInPohutu {
+	"DAD: Ahoy!\n"
+	"We've hit land in POHUTU!\p"
+	"You just go on and get your\n"
+	"first Pokémon!"
+}
+
+text PohutuCity_Text_DadGetGoing {
+    format(
+        "Don't worry about me, go on and get your Pokémon!"
+    )
+}
+
+text PohutuCity_Text_DadLeaves {
+    format(
+        "Now that you've got your new Pokémon, why don't you take ROUTE 1 and meet me back home."
+    )
+}
