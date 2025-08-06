@@ -2,7 +2,9 @@ mapscripts KawakawaInlet_MCHouse_1F_MapScripts {
     MAP_SCRIPT_ON_LOAD: KawakawaInlet_MCHouse_1F_OnLoad
     MAP_SCRIPT_ON_TRANSITION: KawakawaInlet_MCHouse_1F_OnTransition
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_KAWAKAWA_INTRO_STATE, 1: KawakawaInlet_MCHouse_1F_EventScript_HappyBirthday
+        VAR_KAWAKAWA_INTRO_STATE, 1: KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning
+        VAR_KAWAKAWA_INTRO_STATE, 4: KawakawaInlet_MCHouse_1F_EventScript_DadAfterFestival
+        VAR_KAWAKAWA_INTRO_STATE, 6: KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2
     ]
 }
 
@@ -14,23 +16,50 @@ script KawakawaInlet_MCHouse_1F_OnTransition {
 
 }
 
-script KawakawaInlet_MCHouse_1F_EventScript_HappyBirthday {
+script KawakawaInlet_MCHouse_1F_EventScript_Mom {
+	lock
+	faceplayer
+    if (var(VAR_KAWAKAWA_INTRO_STATE) == 2) {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_MomGoOn)
+    } elif (var(VAR_KAWAKAWA_INTRO_STATE) == 5) {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_MomGetSomeRest)
+    } else {
+        goto(PlayersHouse_1F_EventScript_MomHealsParty)
+    } 
+	release
+    end
+}
+
+script KawakawaInlet_MCHouse_1F_EventScript_Dad {
+	lock
+	faceplayer
+    if (var(VAR_KAWAKAWA_INTRO_STATE) == 5) {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_DadGetSomeRest)
+    } else {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_DadHeyChamp)
+    }
+	release
+    end
+}
+
+script KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning {
     lockall
     playse(SE_PIN)
     applymovement(1, Common_Movement_ExclamationMark)
     waitmovement(0)
-    msgbox(KawakawaInlet_MCHouse_1F_Text_OhComeQuickly)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_MomGoodMorning)
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable)
     waitmovement(0)
-    msgbox(KawakawaInlet_MCHouse_1F_Text_HappyBirthday)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_MomWhatDayIsIt)
     closemessage
-    addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+    addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 2
+    releaseall
+    end
 }
 
-text KawakawaInlet_MCHouse_1F_Text_OhComeQuickly {
-    "MOM: Oh! {PLAYER}, you're up!\n"
-    "Quick! Come quickly!"
+text KawakawaInlet_MCHouse_1F_Text_MomGoodMorning {
+    format("MOM: Good morning, sleepyhead!")
 }
 
 movement KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable {
@@ -40,28 +69,94 @@ movement KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable {
     face_left
 }
 
-text KawakawaInlet_MCHouse_1F_Text_HappyBirthday {
+text KawakawaInlet_MCHouse_1F_Text_MomWhatDayIsIt {
     format(
-        "MOM: Happy birthday {PLAYER}!\p"
-        "I won't keep you long, I'm sure you can't wait to get your first Pokémon!\p"
-        "Your dad's waiting for you by the boat, go on!"
+        "MOM: Guess what today is? It's the day!\n"
+        "The day you finally get your very own Pokémon!\p"
+        "Your dad's already down at the docks, polishing up the boat for ya. "
+        "He's practically bursting with excitement!\n"
+        "Go on, scoot!\p"
+        "I'll meet up with you two after I finish up here."
     )
 }
 
-text KawakawaInlet_MCHouse_1F_Text_GoOn {
+text KawakawaInlet_MCHouse_1F_Text_MomGoOn {
     format(
-        "Go on, your dad's waiting at the boat!"
+        "MOM: Go on, your dad's waiting at the boat!"
     )
 }
 
-script KawakawaInlet_MCHouse_1F_EventScript_Mom {
-	lock
-	faceplayer
-    if (!flag(FLAG_RECEIVED_STARTER)) {
-        msgbox(KawakawaInlet_MCHouse_1F_Text_GoOn)
-    } elif (flag(FLAG_RECEIVED_STARTER)) {
-        goto(PlayersHouse_1F_EventScript_MomHealsParty)
-    } 
-	release
+script KawakawaInlet_MCHouse_1F_EventScript_DadAfterFestival {
+    lockall
+    playse(SE_PIN)
+    applymovement(2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_DadAfterFestival)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable2)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_DadSorryEarlyTrip)
+    closemessage
+    addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 5
+    releaseall
     end
+}
+
+text KawakawaInlet_MCHouse_1F_Text_DadHeyChamp {
+    format(
+        "DAD: Hey, champ!"
+    )
+}
+
+text KawakawaInlet_MCHouse_1F_Text_DadAfterFestival {
+    format(
+        "DAD: Hey, kiddo! How was going through ROUTE 1 all by yourself? "
+    )
+}
+
+movement KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable2 {
+	walk_left * 3
+    walk_up
+    face_left
+}
+
+text KawakawaInlet_MCHouse_1F_Text_DadSorryEarlyTrip {
+    format(
+        "DAD: Sorry champ, but I've gotta be up early for a fishing trip tomorrow. So I won't be able to see you off on your journey, but I know you'll do great!\p"
+        "Now get some rest, you'll need it for tomorrow!"
+    )
+}
+
+text KawakawaInlet_MCHouse_1F_Text_DadGetSomeRest {
+    format(
+        "DAD: Hit the hay! You have a big day tomorrow!"
+    )
+}
+
+text KawakawaInlet_MCHouse_1F_Text_MomGetSomeRest {
+    format(
+        "MOM: I hope you had fun today!\p"
+        "Now get some rest for tomorrow, sweetie."
+    )
+}
+
+script KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2 {
+    lockall
+    playse(SE_PIN)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_MomGoodMorning)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, KawakawaInlet_MCHouse_1F_Movement_PlayerApproachTable)
+    waitmovement(0)
+    msgbox(KawakawaInlet_MCHouse_1F_Text_MomPackedBag)
+    closemessage
+    addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+}
+
+text KawakawaInlet_MCHouse_1F_Text_MomPackedBag {
+    format(
+        "MOM: Your dad had to leave early, but he packed your bag for you!\p"
+        "Now you're all set to go! I'm so nervous, but I'm sure you'll do great!"
+    )
 }

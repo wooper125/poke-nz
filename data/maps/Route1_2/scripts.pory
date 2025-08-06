@@ -1,0 +1,8 @@
+mapscripts Route1_2_MapScripts {
+    MAP_SCRIPT_ON_LOAD {
+        if (var(VAR_KAWAKAWA_INTRO_STATE) == 4) {
+            setflag(FLAG_HIDE_POHUTU_CITY_DAD)
+            setflag(FLAG_HIDE_DAD_BOAT_POHUTU_CITY)
+        }
+    }
+}

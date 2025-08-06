@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE1_2",
   "name": "Route1_2",
   "layout": "LAYOUT_ROUTE1_2",
-  "music": "MUS_DUMMY",
+  "music": "MUS_ROUTE101",
   "region_map_section": "MAPSEC_ROUTE_1",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

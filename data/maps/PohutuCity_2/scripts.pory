@@ -25,26 +25,45 @@ script PohutuCity_EventScript_ChooseStarter {
 }
 
 script PohutuCity_EventScript_DadLeaves {
-    msgbox(PohutuCity_Text_DadLeaves)
-    closemessage
+    lock
+    if (var(VAR_KAWAKAWA_INTRO_STATE) == 3) {
+        msgbox(PohutuCity_Text_DadLeaves)
+        closemessage
+        addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 4
+        clearflag(FLAG_HIDE_PLAYERS_HOUSE_DAD)
+        clearflag(FLAG_HIDE_ROUTE_23_DAD_BOAT)
+    } else {
+        msgbox(PohutuCity_Text_DadSeeYouLater)
+        closemessage
+    }
+    release
     end
 }
 
 text PohutuCity_Text_DadLandedInPohutu {
-	"DAD: Ahoy!\n"
-	"We've hit land in POHUTU!\p"
-	"You just go on and get your\n"
-	"first Pokémon!"
+	format(
+        "DAD: Alright, deckhand, this is your stop!\p"
+        "Go on and enjoy the Matariki festivities. "
+        "I'll be here, keepin' the boat steady.\p"
+        "Don't be too long!"
+    )
 }
 
 text PohutuCity_Text_DadGetGoing {
     format(
-        "Don't worry about me, go on and get your Pokémon!"
+        "DAD: Don't worry about me, go on and get your Pokémon!"
     )
 }
 
 text PohutuCity_Text_DadLeaves {
     format(
-        "Now that you've got your new Pokémon, why don't you take ROUTE 1 and meet me back home."
+        "DAD: Aye, time to set a course for home. You take ROUTE 1, kiddo. "
+        "See what the wild has in store for ya!"
+    )
+}
+
+text PohutuCity_Text_DadSeeYouLater {
+    format(
+        "DAD: See you at home, kiddo!"
     )
 }

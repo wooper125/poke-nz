@@ -12,7 +12,8 @@ script Route23_EventScript_Dad {
         } else {
             msgbox(Route23_Text_TheresMyGirl)
         }
-        addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+        msgbox(Route23_Text_IRemember)
+        addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 3
     }
     msgbox(Route23_Text_ReadyToSailYesNo, MSGBOX_YESNO)
 	if(var(VAR_RESULT) == NO) {
@@ -73,6 +74,7 @@ script Route23_EventScript_ArriveInPohutu {
 }
 
 script Route23_EventScript_LandedInPohutu {
+    delay(50)
 	msgbox(PohutuCity_Text_DadLandedInPohutu, MSGBOX_DEFAULT)
 	releaseall
 	end
@@ -119,24 +121,25 @@ movement Route23_Movement_DadExitBoat {
 
 text Route23_Text_TheresMyBoy {
     format(
-        "There's my boy!\nI was wondering when you'd show up.\p"
-        "I'm sure you're really excited to get going!"
-        "I remember getting my first Pokémon...\p"
-        "Anyways, that's enough reminiscing, I shouldn't keep you waiting."
+        "DAD: There's my boy!\nBeen waitin' on ya, kiddo."
     )
 }
 
 text Route23_Text_TheresMyGirl {
     format(
-        "There's my girl!\nI was wondering when you'd show up.\p"
-        "I'm sure you're really excited to get going!"
-        "I remember getting my first Pokémon...\p"
-        "Anyways, that's enough reminiscing, I shouldn't keep you waiting."
+        "DAD: There's my girl!\nBeen waitin' on ya, kiddo."
+    )
+}
+
+text Route23_Text_IRemember {
+    format(
+        "Reminds me of when I got my first partner, a feisty little...\p"
+        "Ah, never mind that old sea tale for now."
     )
 }
 
 text Route23_Text_ReadyToSailYesNo {
-    format("So, are you ready to sail kid?")
+    format("Ready to set sail for Pohutu City, eh?")
 }
 
 text Route23_Text_DeclineSailing {

@@ -45,26 +45,53 @@ PohutuCity_EventScript_ChooseStarter_2:
 
 PohutuCity_EventScript_DadLeaves::
 # 28 "data/maps/PohutuCity_2/scripts.pory"
-	msgbox PohutuCity_Text_DadLeaves
+	lock
 # 29 "data/maps/PohutuCity_2/scripts.pory"
+	compare VAR_KAWAKAWA_INTRO_STATE, 3
+	goto_if_eq PohutuCity_EventScript_DadLeaves_2
+# 36 "data/maps/PohutuCity_2/scripts.pory"
+	msgbox PohutuCity_Text_DadSeeYouLater
+# 37 "data/maps/PohutuCity_2/scripts.pory"
 	closemessage
+PohutuCity_EventScript_DadLeaves_1:
+# 39 "data/maps/PohutuCity_2/scripts.pory"
+	release
 	end
+
+PohutuCity_EventScript_DadLeaves_2:
+# 30 "data/maps/PohutuCity_2/scripts.pory"
+	msgbox PohutuCity_Text_DadLeaves
+# 31 "data/maps/PohutuCity_2/scripts.pory"
+	closemessage
+# 32 "data/maps/PohutuCity_2/scripts.pory"
+	addvar VAR_KAWAKAWA_INTRO_STATE, 1
+# 33 "data/maps/PohutuCity_2/scripts.pory"
+	clearflag FLAG_HIDE_PLAYERS_HOUSE_DAD
+# 34 "data/maps/PohutuCity_2/scripts.pory"
+	clearflag FLAG_HIDE_ROUTE_23_DAD_BOAT
+	goto PohutuCity_EventScript_DadLeaves_1
 
 
 PohutuCity_Text_DadLandedInPohutu::
-# 33 "data/maps/PohutuCity_2/scripts.pory"
-	.string "DAD: Ahoy!\n"
-	.string "We've hit land in POHUTU!\p"
-	.string "You just go on and get your\n"
-	.string "first Pokémon!$"
+# 43 "data/maps/PohutuCity_2/scripts.pory"
+	.string "DAD: Alright, deckhand, this is your\n"
+	.string "stop!\p"
+	.string "Go on and enjoy the Matariki\n"
+	.string "festivities. I'll be here, keepin' the\l"
+	.string "boat steady.\p"
+	.string "Don't be too long!$"
 
 PohutuCity_Text_DadGetGoing::
-# 40 "data/maps/PohutuCity_2/scripts.pory"
-	.string "Don't worry about me, go on and get your\n"
-	.string "Pokémon!$"
+# 52 "data/maps/PohutuCity_2/scripts.pory"
+	.string "DAD: Don't worry about me, go on and get\n"
+	.string "your Pokémon!$"
 
 PohutuCity_Text_DadLeaves::
-# 46 "data/maps/PohutuCity_2/scripts.pory"
-	.string "Now that you've got your new Pokémon,\n"
-	.string "why don't you take ROUTE 1 and meet me\l"
-	.string "back home.$"
+# 58 "data/maps/PohutuCity_2/scripts.pory"
+	.string "DAD: Aye, time to set a course for home.\n"
+	.string "You take ROUTE 1, kiddo. See what the\l"
+	.string "wild has in store for ya!$"
+
+PohutuCity_Text_DadSeeYouLater::
+# 65 "data/maps/PohutuCity_2/scripts.pory"
+	.string "DAD: See you at home, kiddo!$"
