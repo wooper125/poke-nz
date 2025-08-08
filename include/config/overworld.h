@@ -86,17 +86,17 @@
 #define TIME_DEBUG                      GEN_LATEST + 3
 
 //Time
-#define OW_TIMES_OF_DAY                 GEN_LATEST   // Different generations have the times of day change at different times.
-#define OW_USE_FAKE_RTC                 FALSE        // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
-#define OW_ALTERED_TIME_RATIO           GEN_LATEST   // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. TIME_DEBUG is 1:1, and meant for debugging purposes. This has no effect if OW_USE_FAKE_RTC is FALSE.
-#define OW_TIME_OF_DAY_ENCOUNTERS       FALSE        // If TRUE, will allow the user to define and use different encounter tables based on the time of day.
-#define OW_TIME_OF_DAY_DISABLE_FALLBACK FALSE        // If TRUE, if the encounter table for a specific map and time is empty, the area will have no encounters instead of falling back to the vanilla map and time.
-#define OW_TIME_OF_DAY_FALLBACK         TIME_MORNING // The time of day that encounter tables fall back to.
+#define OW_TIMES_OF_DAY                 GEN_LATEST      // Different generations have the times of day change at different times.
+#define OW_USE_FAKE_RTC                 TRUE            // When TRUE, seconds on the in-game clock will only advance once every 60 playTimeVBlanks (every 60 frames).
+#define OW_ALTERED_TIME_RATIO           GEN_LATEST      // In GEN_8_PLA, the time in game moves forward 60 seconds for every second in the RTC. In GEN_9, it is 20 seconds. TIME_DEBUG is 1:1, and meant for debugging purposes. This has no effect if OW_USE_FAKE_RTC is FALSE.
+#define OW_TIME_OF_DAY_ENCOUNTERS       TRUE            // If TRUE, will allow the user to define and use different encounter tables based on the time of day.
+#define OW_TIME_OF_DAY_DISABLE_FALLBACK FALSE           // If TRUE, if the encounter table for a specific map and time is empty, the area will have no encounters instead of falling back to the vanilla map and time.
+#define OW_TIME_OF_DAY_FALLBACK         TIME_MORNING    // The time of day that encounter tables fall back to.
 
 // Lighting
 #define OW_SHADOW_INTENSITY             4       // Ranges from 0 to 16, where 0 is fully transparent and 16 is black.
 #define OW_OBJECT_SUBPRIORITY           148     // The higher the value, the farther back compared to other sprites. Shadows should be behind object events.
-#define OW_ENABLE_DNS                   FALSE   // If set to TRUE, the overworld will be tinted depending on time of day.
+#define OW_ENABLE_DNS                   TRUE    // If set to TRUE, the overworld will be tinted depending on time of day.
 
 // Object Event Shadows
 #define OW_OBJECT_VANILLA_SHADOWS      FALSE    // In vanilla shadows in the overworld are only shown when jumping.
@@ -104,11 +104,11 @@
 // Overworld flags
 // To use the following features in scripting, replace the 0s with the flag ID you're assigning it to.
 // Eg: Replace with FLAG_UNUSED_0x264 so you can use that flag to toggle the feature.
-#define OW_FLAG_PAUSE_TIME          0  // If this flag is set and OW_USE_FAKE_RTC is enabled, seconds on the in-game clock will not advance.
-#define OW_FLAG_NO_ENCOUNTER        0  // If this flag is set, wild encounters will be disabled.
-#define OW_FLAG_NO_TRAINER_SEE      0  // If this flag is set, trainers will not battle the player unless they're talked to.
-#define OW_FLAG_NO_COLLISION        0  // If this flag is set, the player will be able to walk over tiles with collision. Mainly intended for debugging purposes.
-#define OW_FLAG_POKE_RIDER          0  // If this flag is set, the player will be able to use fly from the Pokenav Region Map and the Town Map key item by pressing 'R' on a city/location they are able to fly to.
+#define OW_FLAG_PAUSE_TIME          FLAG_UNUSED_0x264   // If this flag is set and OW_USE_FAKE_RTC is enabled, seconds on the in-game clock will not advance.
+#define OW_FLAG_NO_ENCOUNTER        0                   // If this flag is set, wild encounters will be disabled.
+#define OW_FLAG_NO_TRAINER_SEE      0                   // If this flag is set, trainers will not battle the player unless they're talked to.
+#define OW_FLAG_NO_COLLISION        0                   // If this flag is set, the player will be able to walk over tiles with collision. Mainly intended for debugging purposes.
+#define OW_FLAG_POKE_RIDER          0                   // If this flag is set, the player will be able to use fly from the Pokenav Region Map and the Town Map key item by pressing 'R' on a city/location they are able to fly to.
 
 #define BATTLE_PYRAMID_RANDOM_ENCOUNTERS    FALSE    // If set to TRUE, battle pyramid Pokemon will be generated randomly based on the round's challenge instead of hardcoded in src/data/battle_frontier/battle_pyramid_level_50_wild_mons.h (or open_level_wild_mons.h)
 

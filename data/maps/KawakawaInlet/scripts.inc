@@ -5,7 +5,7 @@ KawakawaInlet_MapScripts::
 
 KawakawaInlet_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 3 "data/maps/KawakawaInlet/scripts.pory"
-	setflag FLAG_VISITED_LITTLEROOT_TOWN
+	setflag FLAG_VISITED_KAWAKAWA_INLET
 	return
 
 

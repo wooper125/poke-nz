@@ -186,6 +186,8 @@ KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2::
 	closemessage
 # 154 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	addvar VAR_KAWAKAWA_INTRO_STATE, 1
+# 155 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	setflag FLAG_ADVENTURE_STARTED
 	return
 
 
@@ -240,7 +242,7 @@ KawakawaInlet_MCHouse_1F_Text_MomGetSomeRest::
 	.string "sweetie.$"
 
 KawakawaInlet_MCHouse_1F_Text_MomPackedBag::
-# 157 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+# 158 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	.string "MOM: Your dad had to leave early, but he\n"
 	.string "packed your bag for you!\p"
 	.string "Now you're all set to go! I'm so nervous,\n"

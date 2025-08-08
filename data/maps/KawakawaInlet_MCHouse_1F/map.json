@@ -3,7 +3,7 @@
   "name": "KawakawaInlet_MCHouse_1F",
   "layout": "LAYOUT_KAWAKAWA_INLET_MCHOUSE_1F",
   "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_KAWAKAWA_INLET",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

@@ -152,6 +152,7 @@ script KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2 {
     msgbox(KawakawaInlet_MCHouse_1F_Text_MomPackedBag)
     closemessage
     addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
+    setflag(FLAG_ADVENTURE_STARTED)
 }
 
 text KawakawaInlet_MCHouse_1F_Text_MomPackedBag {

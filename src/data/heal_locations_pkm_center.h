@@ -140,6 +140,26 @@ static const struct HealLocation sHealLocationsPokemonCenter[NUM_HEAL_LOCATIONS 
         .mapNum = MAP_NUM(MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F),
         DEFAULT_POKEMON_CENTER_COORDS,
     },
+    [HEAL_LOCATION_KAWAKAWA_INLET_MCHOUSE_2F - 1] =
+    {
+        .mapGroup = MAP_GROUP(MAP_KAWAKAWA_INLET_MCHOUSE_2F),
+        .mapNum = MAP_NUM(MAP_KAWAKAWA_INLET_MCHOUSE_2F),
+        .x = 1,
+        .y = 4,
+    },
+    [HEAL_LOCATION_KAWAKAWA_INLET - 1] =
+    {
+        .mapGroup = MAP_GROUP(MAP_KAWAKAWA_INLET),
+        .mapNum = MAP_NUM(MAP_KAWAKAWA_INLET),
+        .x = 21,
+        .y = 11,
+    },
+    [HEAL_LOCATION_POHUTU_CITY - 1] =
+    {
+        .mapGroup = MAP_GROUP(MAP_POHUTU_CITY_POKEMON_CENTER_1F),
+        .mapNum = MAP_NUM(MAP_POHUTU_CITY_POKEMON_CENTER_1F),
+        DEFAULT_POKEMON_CENTER_COORDS,
+    },
 };
 
 #undef DEFAULT_POKEMON_CENTER_COORDS
@@ -172,4 +192,7 @@ static const u8 sHealNpcLocalId[NUM_HEAL_LOCATIONS - 1] =
     [HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE - 1] = 1,
     [HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR - 1] = 0, // no heal npc
     [HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST - 1] = 1,
+    [HEAL_LOCATION_KAWAKAWA_INLET_MCHOUSE_2F - 1] = 1,
+    [HEAL_LOCATION_KAWAKAWA_INLET - 1] = 1,
+    [HEAL_LOCATION_POHUTU_CITY - 1] = 1,
 };

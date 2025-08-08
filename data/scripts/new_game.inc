@@ -274,6 +274,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_POHUTU_CITY_DAD
 	setflag FLAG_HIDE_DAD_BOAT_POHUTU_CITY
+	setflag FLAG_START
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	call EventScript_ResetAllBerries

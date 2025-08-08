@@ -34,7 +34,8 @@
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
-    "gMapGroup_IndoorKawakawa"
+    "gMapGroup_IndoorKawakawa",
+    "gMapGroup_IndoorPohutu"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -633,5 +634,9 @@
   "gMapGroup_IndoorKawakawa": [
     "KawakawaInlet_MCHouse_1F",
     "KawakawaInlet_MCHouse_2F"
+  ],
+  "gMapGroup_IndoorPohutu": [
+    "PohutuCity_PokemonCenter_1F",
+    "PohutuCity_Mart"
   ]
 }

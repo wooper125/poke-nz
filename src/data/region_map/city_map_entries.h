@@ -110,4 +110,14 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .index = 1,
         .tilemap = gPokenavCityMap_EverGrande_1,
     },
+    // {
+    //     .mapSecId = MAPSEC_KAWAKAWA_INLET,
+    //     .index = 0,
+    //     .tilemap = gPokenavCityMap_Littleroot_0,
+    // },
+    // {
+    //     .mapSecId = MAPSEC_POHUTU_CITY,
+    //     .index = 0,
+    //     .tilemap = gPokenavCityMap_Petalburg_0,
+    // },
 };

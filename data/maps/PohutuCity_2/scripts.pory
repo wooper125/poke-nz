@@ -1,6 +1,12 @@
 mapscripts PohutuCity_2_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        setflag(FLAG_VISITED_PETALBURG_CITY)
+        setflag(FLAG_VISITED_POHUTU_CITY)
+    }
+    MAP_SCRIPT_ON_LOAD {
+        if (var(VAR_KAWAKAWA_INTRO_STATE) == 4) {
+            setflag(FLAG_HIDE_POHUTU_CITY_DAD)
+            setflag(FLAG_HIDE_DAD_BOAT_POHUTU_CITY)
+        }
     }
 }
 
@@ -17,10 +23,20 @@ script PohutuCity_EventScript_Dad {
 }
 
 script PohutuCity_EventScript_ChooseStarter {
+    lock
     if(!flag(FLAG_RECEIVED_STARTER)) {
-        special(ChooseStarter)
+        setflag(FLAG_SYS_POKEMON_GET)
         setflag(FLAG_RECEIVED_STARTER)
+        special(ChooseStarter)
+        waitstate
+        fadescreenswapbuffers(FADE_TO_BLACK)
+        fwdtime(0,0) # Set the time to 12:00 AM
+        pausefakertc
+        playfanfare(MUS_OBTAIN_ITEM)
+        waitfanfare
+        fadescreenswapbuffers(FADE_FROM_BLACK)
     }
+    release
     end
 }
 

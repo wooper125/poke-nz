@@ -3,12 +3,12 @@ mapscripts KawakawaInlet_MCHouse_2F_MapScripts {
 }
 
 script KawakawaInlet_MCHouse_2F_EventScript_SetIntroFlags {
-    if (!flag(FLAG_START)) {
-        lockall
+    if (flag(FLAG_START)) {
+        fwdtime(8,0) # Set the time to 8:00 AM
+        pausefakertc
         setrespawn(HEAL_LOCATION_KAWAKAWA_INLET_MCHOUSE_2F)
 	    setvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 1
-        setflag(FLAG_START)
-        releaseall
+        clearflag(FLAG_START)
     }
     end
 }
@@ -17,11 +17,43 @@ script KawakawaInlet_MCHouse_2F_EventScript_Sleep {
     if (var(VAR_KAWAKAWA_INTRO_STATE) == 5) {
         lockall
         fadescreen(FADE_TO_BLACK)
+        delay(50)
         fadescreen(FADE_FROM_BLACK)
         addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 6
         setflag(FLAG_HIDE_PLAYERS_HOUSE_DAD)
         setflag(FLAG_HIDE_ROUTE_23_DAD_BOAT)
+        fwdtime(8,0) # Set the time to 8:00 AM
+        resumefakertc
         releaseall
     }
     end
+}
+
+script KawakawaInlet_MCHouse_2F_EventScript_CheckPlayersPC {
+	setvar(VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE)
+	special(DoPCTurnOnEffect)
+	playse(SE_PC_ON)
+	msgbox(gText_PlayerHouseBootPC, MSGBOX_DEFAULT)
+	special(BedroomPC)
+	waitstate
+	releaseall
+	end
+}
+
+script KawakawaInlet_MCHouse_2F_EventScript_TurnOffPlayerPC {
+	setvar(VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE)
+	playse(SE_PC_OFF)
+	special(DoPCTurnOffEffect)
+	releaseall
+	end
+}
+
+script KawakawaInlet_MCHouse_2F_EventScript_Notebook {
+	msgbox(PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN)
+	end
+}
+
+script KawakawaInlet_MCHouse_2F_EventScript_GameCube {
+	msgbox(PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN)
+	end
 }

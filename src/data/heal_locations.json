@@ -137,6 +137,18 @@
       "map": "MAP_KAWAKAWA_INLET_MCHOUSE_2F",
       "x": 1,
       "y": 4
+    },
+    {
+      "id": "HEAL_LOCATION_KAWAKAWA_INLET",
+      "map": "MAP_KAWAKAWA_INLET",
+      "x": 21,
+      "y": 11
+    },
+    {
+      "id": "HEAL_LOCATION_POHUTU_CITY",
+      "map": "MAP_POHUTU_CITY_2",
+      "x": 18,
+      "y": 15
     }
   ]
 }
