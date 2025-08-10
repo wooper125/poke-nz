@@ -2408,4 +2408,12 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_LULLABY] =
+    {
+        .name = _("Lullaby"),
+        .description = COMPOUND_STRING("Sound moves can sleep."),
+        .aiRating = 2,
+        .breakable = TRUE,
+    },
 };

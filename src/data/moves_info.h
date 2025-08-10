@@ -5594,7 +5594,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Strikes the foe with hard\n"
             "wings spread wide."),
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 100,
         .type = TYPE_STEEL,
         .accuracy = 90,
         .pp = 25,
