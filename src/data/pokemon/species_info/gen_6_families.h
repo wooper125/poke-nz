@@ -1106,11 +1106,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 #define SCATTERBUG_SPECIES_INFO(evolution)                                                  \
     {                                                                                       \
         .baseHP        = 38,                                                                \
-        .baseAttack    = 35,                                                                \
+        .baseAttack    = 40,                                                                \
         .baseDefense   = 40,                                                                \
         .baseSpeed     = 35,                                                                \
-        .baseSpAttack  = 27,                                                                \
-        .baseSpDefense = 25,                                                                \
+        .baseSpAttack  = 32,                                                                \
+        .baseSpDefense = 35,                                                                \
         .types = MON_TYPES(TYPE_BUG),                                                       \
         .catchRate = 255,                                                                   \
         .expYield = 40,                                                                     \
@@ -1189,12 +1189,12 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
 
 #define SPEWPA_SPECIES_INFO(evolution)                                          \
     {                                                                           \
-        .baseHP        = 45,                                                    \
-        .baseAttack    = 22,                                                    \
+        .baseHP        = 49,                                                    \
+        .baseAttack    = 40,                                                    \
         .baseDefense   = 60,                                                    \
         .baseSpeed     = 29,                                                    \
-        .baseSpAttack  = 27,                                                    \
-        .baseSpDefense = 30,                                                    \
+        .baseSpAttack  = 37,                                                    \
+        .baseSpDefense = 50,                                                    \
         .types = MON_TYPES(TYPE_BUG),                                           \
         .catchRate = 120,                                                       \
         .expYield = 75,                                                         \
@@ -1274,8 +1274,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .baseHP        = 80,                                                                \
         .baseAttack    = 52,                                                                \
         .baseDefense   = 50,                                                                \
-        .baseSpeed     = 89,                                                                \
-        .baseSpAttack  = 90,                                                                \
+        .baseSpeed     = 109,                                                                \
+        .baseSpAttack  = 94,                                                                \
         .baseSpDefense = 50,                                                                \
         .types = MON_TYPES(TYPE_BUG, TYPE_FLYING),                                          \
         .catchRate = 45,                                                                    \

@@ -151,13 +151,27 @@ script KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2 {
     waitmovement(0)
     msgbox(KawakawaInlet_MCHouse_1F_Text_MomPackedBag)
     closemessage
+    giveitem(ITEM_POKE_BALL, 10)
+    giveitem(ITEM_FRESH_WATER, 5)
+    giveitem(ITEM_OLD_ROD, 1)
+    giveitem(ITEM_TOWN_MAP, 1)
+    giveitem(ITEM_EXP_SHARE, 1)
     addvar(VAR_KAWAKAWA_INTRO_STATE, 1)
     setflag(FLAG_ADVENTURE_STARTED)
 }
 
+text KawakawaInlet_MCHouse_1F_Text_MomGoodMorning2 {
+    format("MOM: Good morning, {PLAYER}!")
+}
+
 text KawakawaInlet_MCHouse_1F_Text_MomPackedBag {
     format(
-        "MOM: Your dad had to leave early, but he packed your bag for you!\p"
+        "MOM: Your dad had to leave early, but he packed some items for your journey!\p"
+    )
+}
+
+text KawakawaInlet_MCHouse_1F_Text_MomAllSet {
+    format(
         "Now you're all set to go! I'm so nervous, but I'm sure you'll do great!"
     )
 }

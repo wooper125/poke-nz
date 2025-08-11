@@ -293,7 +293,8 @@ bool32 IsAffectedByFollowMe(u32 battlerAtk, u32 defSide, u32 move)
         || effect == EFFECT_SNIPE_SHOT
         || effect == EFFECT_SKY_DROP
         || ability == ABILITY_PROPELLER_TAIL
-        || ability == ABILITY_STALWART)
+        || ability == ABILITY_STALWART
+        || (ability == ABILITY_SUREFIRE && IsBallisticMove(move)))
         return FALSE;
 
     if (effect == EFFECT_PURSUIT && IsPursuitTargetSet())
@@ -341,7 +342,8 @@ bool32 HandleMoveTargetRedirection(void)
                 && moveEffect != EFFECT_SNIPE_SHOT
                 && moveEffect != EFFECT_PLEDGE
                 && GetBattlerAbility(gBattlerAttacker) != ABILITY_PROPELLER_TAIL
-                && GetBattlerAbility(gBattlerAttacker) != ABILITY_STALWART)
+                && GetBattlerAbility(gBattlerAttacker) != ABILITY_STALWART
+                && !(GetBattlerAbility(gBattlerAttacker) == ABILITY_SUREFIRE && IsBallisticMove(gCurrentMove)))
             {
                 redirectorOrderNum = GetBattlerTurnOrderNum(battler);
             }
@@ -5002,7 +5004,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && IsSoundMove(gCurrentMove)
              && CanBeSlept(gBattlerAttacker, gBattlerTarget, gLastUsedAbility, BLOCKED_BY_SLEEP_CLAUSE)
              && IsBattlerTurnDamaged(gBattlerTarget) // Need to actually hit the target
-             && RandomPercentage(RNG_SOMNILOQUY, 20))
+             && RandomPercentage(RNG_LULLABY, 30))
             {
                 gBattleScripting.moveEffect = MOVE_EFFECT_SLEEP;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -8504,6 +8506,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(struct DamageCalculationData *
     case ABILITY_LULLABY:
         if (IsSoundMove(move))
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.1));
+        break;
+    case ABILITY_SUREFIRE:
+        if (IsBallisticMove(move))
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.2));
         break;
     }
 

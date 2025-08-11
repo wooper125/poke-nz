@@ -2413,7 +2413,14 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
     {
         .name = _("Lullaby"),
         .description = COMPOUND_STRING("Sound moves can sleep."),
-        .aiRating = 2,
+        .aiRating = 4,
+        .breakable = TRUE,
+    },
+    [ABILITY_SUREFIRE] =
+    {
+        .name = _("Surefire"),
+        .description = COMPOUND_STRING("Ballistics always hit."),
+        .aiRating = 6,
         .breakable = TRUE,
     },
 };

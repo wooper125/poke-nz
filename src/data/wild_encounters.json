@@ -11908,12 +11908,12 @@
               {
                 "min_level": 3,
                 "max_level": 5,
-                "species": "SPECIES_PICHU"
+                "species": "SPECIES_MARILL"
               },
               {
                 "min_level": 3,
-                "max_level": 5,
-                "species": "SPECIES_FOMANTIS"
+                "max_level": 3,
+                "species": "SPECIES_SCATTERBUG_GARDEN"
               },
               {
                 "min_level": 4,
@@ -12036,8 +12036,8 @@
               },
               {
                 "min_level": 3,
-                "max_level": 5,
-                "species": "SPECIES_MORELULL"
+                "max_level": 3,
+                "species": "SPECIES_TAROUNTULA"
               },
               {
                 "min_level": 4,

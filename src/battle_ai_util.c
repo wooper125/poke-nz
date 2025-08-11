@@ -1688,7 +1688,8 @@ bool32 IsMoveRedirectionPrevented(u32 battlerAtk, u32 move, u32 atkAbility)
     if (effect == EFFECT_SKY_DROP
       || effect == EFFECT_SNIPE_SHOT
       || atkAbility == ABILITY_PROPELLER_TAIL
-      || atkAbility == ABILITY_STALWART)
+      || atkAbility == ABILITY_STALWART
+      || (atkAbility == ABILITY_SUREFIRE && IsBallisticMove(move)))
         return TRUE;
     return FALSE;
 }
@@ -1721,7 +1722,9 @@ bool32 IsMoveEncouragedToHit(u32 battlerAtk, u32 battlerDef, u32 move)
     if (gStatuses3[battlerDef] & STATUS3_ALWAYS_HITS || gDisableStructs[battlerDef].battlerWithSureHit == battlerAtk)
         return TRUE;
 
-    if (gAiLogicData->abilities[battlerDef] == ABILITY_NO_GUARD || gAiLogicData->abilities[battlerAtk] == ABILITY_NO_GUARD)
+    if (gAiLogicData->abilities[battlerDef] == ABILITY_NO_GUARD 
+      || gAiLogicData->abilities[battlerAtk] == ABILITY_NO_GUARD
+      || (gAiLogicData->abilities[battlerAtk] == ABILITY_SUREFIRE && IsBallisticMove(move)))
         return TRUE;
 
     u32 nonVolatileStatus = GetMoveNonVolatileStatus(move);
@@ -1763,7 +1766,7 @@ bool32 ShouldTryOHKO(u32 battlerAtk, u32 battlerDef, u32 atkAbility, u32 defAbil
 
     if ((((gStatuses3[battlerDef] & STATUS3_ALWAYS_HITS)
         && gDisableStructs[battlerDef].battlerWithSureHit == battlerAtk)
-        || atkAbility == ABILITY_NO_GUARD || defAbility == ABILITY_NO_GUARD)
+        || atkAbility == ABILITY_NO_GUARD || defAbility == ABILITY_NO_GUARD || (atkAbility == ABILITY_SUREFIRE && IsBallisticMove(move)))
         && gBattleMons[battlerAtk].level >= gBattleMons[battlerDef].level)
     {
         return TRUE;

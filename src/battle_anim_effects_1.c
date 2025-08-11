@@ -6932,7 +6932,10 @@ static void AnimTask_AllySwitchDataSwap(u8 taskId)
         if (!IsBattlerAlly(gBattleStruct->moveTarget[i], battlerAtk))
             continue;
 
-        if (GetMoveEffect(gChosenMoveByBattler[i]) == EFFECT_SNIPE_SHOT || ability == ABILITY_PROPELLER_TAIL || ability == ABILITY_STALWART)
+        if (GetMoveEffect(gChosenMoveByBattler[i]) == EFFECT_SNIPE_SHOT 
+          || ability == ABILITY_PROPELLER_TAIL 
+          || ability == ABILITY_STALWART
+          || (ability == ABILITY_SUREFIRE && IsBallisticMove(gChosenMoveByBattler[i])))
             gBattleStruct->moveTarget[i] ^= BIT_FLANK;
     }
 

@@ -1518,6 +1518,14 @@ static bool32 AccuracyCalcHelper(u32 move, u32 battler)
         effect = TRUE;
         ability = ABILITY_NO_GUARD;
     }
+    // If the attacker has the ability Surefire and they aren't targeting a Pokemon involved in a Sky Drop with the move Sky Drop, ballistic move hits.
+    else if (GetBattlerAbility(gBattlerAttacker) == ABILITY_SUREFIRE 
+          && IsBallisticMove(move)
+          && !(gStatuses3[battler] & STATUS3_COMMANDER)
+          && (moveEffect != EFFECT_SKY_DROP || gBattleStruct->skyDropTargets[battler] == SKY_DROP_NO_TARGET))
+    {
+        effect = TRUE;
+    }
     // If the target is under the effects of Telekinesis, and the move isn't a OH-KO move, move hits.
     else if (gStatuses3[battler] & STATUS3_TELEKINESIS
           && !(gStatuses3[battler] & STATUS3_SEMI_INVULNERABLE)
@@ -1564,7 +1572,7 @@ static bool32 AccuracyCalcHelper(u32 move, u32 battler)
             return effect;
     }
 
-    if (ability != ABILITY_NONE)
+    if (ability != ABILITY_NONE && !IsBallisticMove(move)) // added check for ballistic moves
         RecordAbilityBattle(gBattlerAttacker, ABILITY_NO_GUARD);
 
     return effect;
@@ -12993,7 +13001,8 @@ static void Cmd_tryKO(void)
         if ((((gStatuses3[gBattlerTarget] & STATUS3_ALWAYS_HITS)
                 && gDisableStructs[gBattlerTarget].battlerWithSureHit == gBattlerAttacker)
             || GetBattlerAbility(gBattlerAttacker) == ABILITY_NO_GUARD
-            || targetAbility == ABILITY_NO_GUARD)
+            || targetAbility == ABILITY_NO_GUARD
+            || (GetBattlerAbility(gBattlerAttacker) == ABILITY_SUREFIRE && IsBallisticMove(gCurrentMove)))
             && gBattleMons[gBattlerAttacker].level >= gBattleMons[gBattlerTarget].level)
         {
             lands = TRUE;
