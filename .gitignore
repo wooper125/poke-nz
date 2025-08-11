@@ -55,3 +55,4 @@ tools/trainerproc/trainerproc
 *.fastSmol
 *.smolTM
 __pycache__
+poryscript
