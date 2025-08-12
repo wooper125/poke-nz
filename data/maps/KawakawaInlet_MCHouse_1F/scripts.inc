@@ -185,8 +185,18 @@ KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2::
 # 153 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	closemessage
 # 154 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
-	addvar VAR_KAWAKAWA_INTRO_STATE, 1
+	giveitem ITEM_POKE_BALL, 10
 # 155 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	giveitem ITEM_FRESH_WATER, 5
+# 156 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	giveitem ITEM_OLD_ROD, 1
+# 157 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	giveitem ITEM_TOWN_MAP, 1
+# 158 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	giveitem ITEM_EXP_SHARE, 1
+# 159 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	addvar VAR_KAWAKAWA_INTRO_STATE, 1
+# 160 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	setflag FLAG_ADVENTURE_STARTED
 	return
 
@@ -241,9 +251,17 @@ KawakawaInlet_MCHouse_1F_Text_MomGetSomeRest::
 	.string "Now get some rest for tomorrow,\n"
 	.string "sweetie.$"
 
+KawakawaInlet_MCHouse_1F_Text_MomGoodMorning2::
+# 163 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+	.string "MOM: Good morning, {PLAYER}!$"
+
 KawakawaInlet_MCHouse_1F_Text_MomPackedBag::
-# 158 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
+# 167 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	.string "MOM: Your dad had to leave early, but he\n"
-	.string "packed your bag for you!\p"
+	.string "packed some items for your journey!\p"
+	.string "$"
+
+KawakawaInlet_MCHouse_1F_Text_MomAllSet::
+# 173 "data/maps/KawakawaInlet_MCHouse_1F/scripts.pory"
 	.string "Now you're all set to go! I'm so nervous,\n"
 	.string "but I'm sure you'll do great!$"

@@ -1066,7 +1066,7 @@ enum {
 // Hoenn Pokédex order
 enum {
     HOENN_DEX_NONE,
-    HOENN_DEX_LAMBUD,
+    HOENN_DEX_TREECKO,
     HOENN_DEX_GROVYLE,
     HOENN_DEX_SCEPTILE,
     HOENN_DEX_TORCHIC,
