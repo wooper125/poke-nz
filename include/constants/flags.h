@@ -43,12 +43,12 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_HIDE_POHUTU_CITY_DAD       0x20 // NEW FLAG
-#define FLAG_HIDE_ROUTE_23_DAD          0x21 // NEW FLAG
-#define FLAG_HIDE_ROUTE_23_DAD_BOAT     0x22 // NEW FLAG
-#define FLAG_HIDE_DAD_BOAT_POHUTU_CITY  0x23 // NEW FLAG
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_HIDE_POHUTU_CITY_DAD           0x20 // NEW FLAG
+#define FLAG_HIDE_ROUTE_23_DAD              0x21 // NEW FLAG
+#define FLAG_HIDE_ROUTE_23_DAD_BOAT         0x22 // NEW FLAG
+#define FLAG_HIDE_DAD_BOAT_POHUTU_CITY      0x23 // NEW FLAG
+#define FLAG_HIDE_ROUTE_1_REPAIRMAN         0x24 // NEW FLAG
+#define FLAG_HIDE_POHUTU_CITY_STARTER_BAG   0x25 // NEW FLAG
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
@@ -657,11 +657,14 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
 #define FLAG_UNUSED_0x264  0x264 // Using for time pausing
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_UNUSED_0x265  0x265 // Using for exp share
+
+// Hidden Items cont.
+#define FLAG_HIDDEN_ITEMS_START_2                                                         0x266
+#define FLAG_HIDDEN_ITEM_ROUTE_1_POTION                      (FLAG_HIDDEN_ITEMS_START_2 + 0x00)
+#define FLAG_HIDDEN_ITEM_KAURI_WOODS_TINY_MUSHROOM           (FLAG_HIDDEN_ITEMS_START_2 + 0x01)
+#define FLAG_HIDDEN_ITEM_KAURI_WOODS_POTION                  (FLAG_HIDDEN_ITEMS_START_2 + 0x02)
+#define FLAG_HIDDEN_ITEM_KAURI_WOODS_TINY_MUSHROOM_2         (FLAG_HIDDEN_ITEMS_START_2 + 0x03)
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
@@ -1222,10 +1225,11 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+// My Item Ball Flags
+#define FLAG_ITEM_ROUTE_1_WATER_STONE                               0x493
+#define FLAG_ITEM_KAURI_WOODS_PARALYZE_HEAL                         0x494
+#define FLAG_ITEM_KAURI_WOODS_X_ATTACK                              0x495 
+#define FLAG_ITEM_KAURI_WOODS_GREAT_BALL                            0x496
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
@@ -1389,7 +1393,7 @@
 
 #define FLAG_VISITED_KAWAKAWA_INLET                 (SYSTEM_FLAGS + 0x21)
 #define FLAG_VISITED_POHUTU_CITY                    (SYSTEM_FLAGS + 0x22)
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
+#define FLAG_VISITED_KAURI_TOWN                     (SYSTEM_FLAGS + 0x23) 
 #define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag

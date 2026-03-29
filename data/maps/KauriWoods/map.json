@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
-      "x": 36,
-      "y": 12,
+      "x": 22,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -30,7 +30,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 51,
-      "y": 7,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -38,12 +38,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_GREAT_BALL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_PETALBURG_WOODS_GREAT_BALL"
+      "flag": "FLAG_ITEM_KAURI_WOODS_GREAT_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 10,
-      "y": 8,
+      "x": 30,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -51,37 +51,37 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_X_ATTACK",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_PETALBURG_WOODS_X_ATTACK"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 26,
-      "y": 19,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_ETHER",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_PETALBURG_WOODS_ETHER"
+      "flag": "FLAG_ITEM_KAURI_WOODS_X_ATTACK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 41,
-      "y": 7,
+      "x": 19,
+      "y": 27,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgWoods_EventScript_Boy1",
+      "script": "KauriWoods_TreeBoy",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 20,
+      "x": 40,
+      "y": 31,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "KauriWoods_Lyle",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 28,
       "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -89,39 +89,26 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "PetalburgWoods_EventScript_Lyle",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 25,
-      "y": 25,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "PetalburgWoods_EventScript_James",
+      "script": "KauriWoods_James_1",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_3",
-      "x": 40,
-      "y": 32,
+      "x": 24,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PetalburgWoods_EventScript_Boy2",
+      "script": "KauriWoods_Boy",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 7,
-      "y": 22,
+      "x": 11,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -129,88 +116,119 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_PARALYZE_HEAL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_PETALBURG_WOODS_PARALYZE_HEAL"
+      "flag": "FLAG_ITEM_KAURI_WOODS_PARALYZE_HEAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 40,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 27,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_13"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 48,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "KauriWoods_Tyler",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 12,
-      "y": 36,
+      "y": 38,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
-      "y": 36,
+      "y": 38,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
       "x": 52,
-      "y": 22,
+      "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE104",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_KAURI_TOWN",
+      "dest_warp_id": "0"
     },
     {
       "x": 53,
-      "y": 22,
+      "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE104",
-      "dest_warp_id": "7"
+      "dest_map": "MAP_KAURI_TOWN",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 13,
-      "y": 29,
+      "x": 12,
+      "y": 34,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PetalburgWoods_EventScript_Sign1"
+      "script": "KauriWoods_Route1Sign"
     },
     {
       "type": "hidden_item",
-      "x": 39,
-      "y": 27,
+      "x": 43,
+      "y": 28,
       "elevation": 3,
       "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_KAURI_WOODS_POTION"
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 21,
+      "x": 11,
+      "y": 15,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_1"
+      "flag": "FLAG_HIDDEN_ITEM_KAURI_WOODS_TINY_MUSHROOM_2"
     },
     {
       "type": "hidden_item",
-      "x": 30,
-      "y": 8,
+      "x": 25,
+      "y": 38,
       "elevation": 3,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_TINY_MUSHROOM_2"
-    },
-    {
-      "type": "hidden_item",
-      "x": 10,
-      "y": 25,
-      "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_WOODS_POKE_BALL"
+      "flag": "FLAG_HIDDEN_ITEM_KAURI_WOODS_TINY_MUSHROOM"
     },
     {
       "type": "sign",
-      "x": 53,
-      "y": 18,
+      "x": 52,
+      "y": 20,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PetalburgWoods_EventScript_Sign2"
+      "script": "KauriWoods_KauriTownSign"
     }
   ]
 }

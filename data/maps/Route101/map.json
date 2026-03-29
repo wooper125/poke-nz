@@ -111,8 +111,8 @@
       "x": 23,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE23",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_KAWAKAWA_INLET",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

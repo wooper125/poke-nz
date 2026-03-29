@@ -4,11 +4,94 @@ mapscripts KawakawaInlet_MapScripts {
     }
 }
 
-script KawakawaInletSign {
+# Kawakawa Intro States VAR_KAWAKAWA_INTRO_STATE
+# 0 - Before starting the game
+# 1 - After waking up for the first time
+# 2 - After talking to Mom in the morning the first time
+# 3 - After talking to Dad at the boat
+# 4 - After talking to Dad at the end of the festival day
+# 5 - After talking to Dad after going through ROUTE 1
+# 6 - After sleeping and waking up the next day
+# 7 - After talking to Mom and starting the adventure
+
+script KawakawaInlet_Sign {
     # a sign stating the towns name and a description
     lock
     msgbox("KAWAKAWA INLET\n"
            "“The dawn of a thousand stories.”$")
     release
     end
+}
+
+script KawakawaInlet_Granny {
+    lock
+	faceplayer
+    if(var(VAR_KAWAKAWA_INTRO_STATE) == 2) {
+        msgbox(KawakawaInlet_Text_DadWaitingAtBoat, MSGBOX_DEFAULT)
+    } elif(var(VAR_KAWAKAWA_INTRO_STATE) == 4) {
+        msgbox(KawakawaInlet_Text_YourVeryOwnPokemon, MSGBOX_DEFAULT)
+    } else {
+        msgbox(KawakawaInlet_Text_IfYouGoInGrassPokemonWillJumpOut, MSGBOX_DEFAULT)
+    }
+    closemessage
+	release
+	end
+}
+
+script KawakawaInlet_Trigger_BlockRoute1 {
+    lockall
+    applymovement(LOCALID_KAWAKAWA_GRANNY, Common_Movement_FaceRight)
+    waitmovement(0)
+    if(var(VAR_KAWAKAWA_INTRO_STATE) == 2) {
+        msgbox(KawakawaInlet_Text_HeyWait, MSGBOX_DEFAULT)
+        closemessage
+        delay(10)
+        applymovement(LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
+        waitmovement(0)
+        msgbox(KawakawaInlet_Text_DadWaitingAtBoat, MSGBOX_DEFAULT)
+    } else {
+        msgbox(KawakawaInlet_Text_DangerousWithoutPokemon, MSGBOX_DEFAULT)
+    }
+    closemessage
+    applymovement(LOCALID_PLAYER, KawakawaInlet_Movement_TurnPlayerBackFromRoute)
+    applymovement(LOCALID_KAWAKAWA_GRANNY, Common_Movement_FaceDown)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement KawakawaInlet_Movement_TurnPlayerBackFromRoute {
+        walk_left
+}
+
+text KawakawaInlet_Text_HeyWait {
+    format(
+        "{PLAYER}!\p"
+    )
+}
+
+text KawakawaInlet_Text_DadWaitingAtBoat {
+    format(
+        "Your Dad is waiting for you at the boat.$"
+    )
+}
+
+text KawakawaInlet_Text_DangerousWithoutPokemon {
+    format(
+        "Be careful out there! It's dangerous without a Pokémon by your side!"
+    )
+}
+
+text KawakawaInlet_Text_YourVeryOwnPokemon {
+    format(
+        "How wonderful, you have your very own Pokémon!\p"
+        "Go on back home and show your parents!$"
+    )
+    
+}
+
+text KawakawaInlet_Text_IfYouGoInGrassPokemonWillJumpOut {
+    format(
+        "If you go in the grass, Pokémon will jump out!$"
+    )
 }

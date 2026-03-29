@@ -20,29 +20,106 @@
     },
     {
       "map": "MAP_ROUTE1_2",
-      "offset": -15,
+      "offset": -10,
       "direction": "right"
     }
   ],
-  "object_events": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_KAWAKAWA_GRANNY",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 26,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KawakawaInlet_Granny",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
-      "x": 21,
-      "y": 10,
+      "x": 14,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_KAWAKAWA_INLET_MCHOUSE_1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 25,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE101",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "2",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "2",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "2",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "KawakawaInlet_Trigger_BlockRoute1"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 32,
-      "y": 7,
+      "x": 21,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "KawakawaInletSign"
+      "script": "KawakawaInlet_Sign"
     }
   ]
 }

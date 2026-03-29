@@ -28,7 +28,7 @@
     {
       "local_id": "LOCALID_POHUTU_DAD",
       "graphics_id": "OBJ_EVENT_GFX_NORMAN",
-      "x": 15,
+      "x": 14,
       "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -42,7 +42,7 @@
     {
       "local_id": "LOCALID_POHUTU_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
-      "x": 15,
+      "x": 14,
       "y": 5,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -64,25 +64,62 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PohutuCity_EventScript_ChooseStarter",
-      "flag": "0"
+      "flag": "FLAG_HIDE_POHUTU_CITY_STARTER_BAG"
     }
   ],
   "warp_events": [
     {
       "x": 18,
-      "y": 14,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_POHUTU_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
       "x": 23,
-      "y": 20,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_POHUTU_CITY_MART",
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "PohutuCity_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "PohutuCity_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "PohutuCity_Trigger_BlockRoute1"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 34,
+      "elevation": 0,
+      "var": "VAR_KAWAKAWA_INTRO_STATE",
+      "var_value": "3",
+      "script": "PohutuCity_Trigger_BlockRoute1"
+    }
+  ],
   "bg_events": []
 }

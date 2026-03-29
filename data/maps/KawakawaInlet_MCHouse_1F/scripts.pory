@@ -16,10 +16,22 @@ script KawakawaInlet_MCHouse_1F_OnTransition {
 
 }
 
+# Kawakawa Intro States
+# 0 - Before starting the game
+# 1 - After waking up for the first time
+# 2 - After talking to Mom in the morning the first time
+# 3 - After talking to Dad about going to the festival
+# 4 - After talking to Dad at the end of the festival day
+# 5 - After talking to Dad after going through ROUTE 1
+# 6 - After sleeping and waking up the next day
+# 7 - After talking to Mom and starting the adventure
+
 script KawakawaInlet_MCHouse_1F_EventScript_Mom {
 	lock
 	faceplayer
     if (var(VAR_KAWAKAWA_INTRO_STATE) == 2) {
+        msgbox(KawakawaInlet_MCHouse_1F_Text_MomGoOn)
+    } elif (var(VAR_KAWAKAWA_INTRO_STATE) == 3) {
         msgbox(KawakawaInlet_MCHouse_1F_Text_MomGoOn)
     } elif (var(VAR_KAWAKAWA_INTRO_STATE) == 5) {
         msgbox(KawakawaInlet_MCHouse_1F_Text_MomGetSomeRest)
@@ -156,8 +168,11 @@ script KawakawaInlet_MCHouse_1F_EventScript_MomGoodMorning2 {
     giveitem(ITEM_OLD_ROD, 1)
     giveitem(ITEM_TOWN_MAP, 1)
     giveitem(ITEM_EXP_SHARE, 1)
+    closemessage
     addvar(VAR_KAWAKAWA_INTRO_STATE, 1) // VAR_KAWAKAWA_INTRO_STATE = 7
     setflag(FLAG_ADVENTURE_STARTED)
+    releaseall
+    end
 }
 
 text KawakawaInlet_MCHouse_1F_Text_MomGoodMorning2 {

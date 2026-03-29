@@ -3,12 +3,23 @@ mapscripts PohutuCity_2_MapScripts {
         setflag(FLAG_VISITED_POHUTU_CITY)
     }
     MAP_SCRIPT_ON_LOAD {
-        if (var(VAR_KAWAKAWA_INTRO_STATE) == 4) {
+        if (var(VAR_KAWAKAWA_INTRO_STATE) >= 4) {
             setflag(FLAG_HIDE_POHUTU_CITY_DAD)
             setflag(FLAG_HIDE_DAD_BOAT_POHUTU_CITY)
+            setflag(FLAG_HIDE_POHUTU_CITY_STARTER_BAG)
         }
     }
 }
+
+# Kawakawa Intro States
+# 0 - Before starting the game
+# 1 - After waking up for the first time
+# 2 - After talking to Mom in the morning the first time
+# 3 - After talking to Dad about going to the festival
+# 4 - After talking to Dad at the end of the festival day
+# 5 - After talking to Dad after going through ROUTE 1
+# 6 - After sleeping and waking up the next day
+# 7 - After talking to Mom and starting the adventure
 
 script PohutuCity_EventScript_Dad {
 	lock
@@ -40,20 +51,36 @@ script PohutuCity_EventScript_ChooseStarter {
     end
 }
 
+script PohutuCity_Trigger_BlockRoute1 {
+    lockall
+    msgbox(PohutuCity_Text_ShowDadMyNewPokemon, MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PLAYER, PohutuCity_Movement_TurnPlayerBackFromRoute)
+    waitmovement(0)
+    releaseall
+    end
+}
+
 script PohutuCity_EventScript_DadLeaves {
     lock
     if (var(VAR_KAWAKAWA_INTRO_STATE) == 3) {
-        msgbox(PohutuCity_Text_DadLeaves)
+        msgbox(PohutuCity_Text_GreatStarterChoice, MSGBOX_DEFAULT)
+        closemessage
+        msgbox(PohutuCity_Text_DadLeaves, MSGBOX_DEFAULT)
         closemessage
         addvar(VAR_KAWAKAWA_INTRO_STATE, 1) # VAR_KAWAKAWA_INTRO_STATE = 4
         clearflag(FLAG_HIDE_PLAYERS_HOUSE_DAD)
         clearflag(FLAG_HIDE_ROUTE_23_DAD_BOAT)
     } else {
-        msgbox(PohutuCity_Text_DadSeeYouLater)
+        msgbox(PohutuCity_Text_DadSeeYouLater, MSGBOX_DEFAULT)
         closemessage
     }
     release
     end
+}
+
+movement PohutuCity_Movement_TurnPlayerBackFromRoute {
+    walk_up
 }
 
 text PohutuCity_Text_DadLandedInPohutu {
@@ -68,6 +95,20 @@ text PohutuCity_Text_DadLandedInPohutu {
 text PohutuCity_Text_DadGetGoing {
     format(
         "DAD: Don't worry about me, go on and get your Pokémon!"
+    )
+}
+
+text PohutuCity_Text_ShowDadMyNewPokemon { 
+    format(
+        "I should show Dad my new Pokémon before I head out."
+    )
+    
+}
+
+text PohutuCity_Text_GreatStarterChoice {
+    format(
+        "DAD: That's a great choice for a starter, {PLAYER}!\p"
+        "I had a feeling you'd pick a good one.\p"
     )
 }
 

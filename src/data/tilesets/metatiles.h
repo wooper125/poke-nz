@@ -213,3 +213,15 @@ const u16 gMetatileAttributes_Kawakawa[] = INCBIN_U16("data/tilesets/secondary/k
 
 const u16 gMetatiles_Kauri[] = INCBIN_U16("data/tilesets/secondary/kauri/metatiles.bin");
 const u16 gMetatileAttributes_Kauri[] = INCBIN_U16("data/tilesets/secondary/kauri/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesSecondaryTutorial[] = INCBIN_U16("data/tilesets/secondary/porytiles_secondary_tutorial/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesSecondaryTutorial[] = INCBIN_U16("data/tilesets/secondary/porytiles_secondary_tutorial/metatile_attributes.bin");
+
+const u16 gMetatiles_NZ_General[] = INCBIN_U16("data/tilesets/primary/nz_general/metatiles.bin");
+const u16 gMetatileAttributes_NZ_General[] = INCBIN_U16("data/tilesets/primary/nz_general/metatile_attributes.bin");
+
+const u16 gMetatiles_Kauri_Town[] = INCBIN_U16("data/tilesets/secondary/kauri_town/metatiles.bin");
+const u16 gMetatileAttributes_Kauri_Town[] = INCBIN_U16("data/tilesets/secondary/kauri_town/metatile_attributes.bin");

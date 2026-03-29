@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorKawakawa",
-    "gMapGroup_IndoorPohutu"
+    "gMapGroup_IndoorPohutu",
+    "gMapGroup_PorytilesTest"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -101,7 +102,8 @@
     "PohutuCity",
     "Route22",
     "Route1_2",
-    "PohutuCity_2"
+    "PohutuCity_2",
+    "KauriTown"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -638,5 +640,8 @@
   "gMapGroup_IndoorPohutu": [
     "PohutuCity_PokemonCenter_1F",
     "PohutuCity_Mart"
+  ],
+  "gMapGroup_PorytilesTest": [
+    "PorytilesTestMap"
   ]
 }

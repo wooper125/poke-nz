@@ -11565,7 +11565,7 @@
           "map": "MAP_ROUTE1_2",
           "base_label": "gRoute1_2",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 2,
@@ -11598,14 +11598,14 @@
                 "species": "SPECIES_SENTRET"
               },
               {
-                "min_level": 4,
+                "min_level": 2,
                 "max_level": 4,
-                "species": "SPECIES_TAILLOW"
+                "species": "SPECIES_HOPPIP"
               },
               {
-                "min_level": 4,
+                "min_level": 2,
                 "max_level": 4,
-                "species": "SPECIES_SENTRET"
+                "species": "SPECIES_HOPPIP"
               },
               {
                 "min_level": 4,
@@ -11660,16 +11660,16 @@
             ]
           },
           "fishing_mons": {
-            "encounter_rate": 30,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 1,
-                "max_level": 10,
+                "max_level": 5,
                 "species": "SPECIES_MAGIKARP"
               },
               {
                 "min_level": 2,
-                "max_level": 10,
+                "max_level": 5,
                 "species": "SPECIES_ARROKUDA"
               },
               {
@@ -11754,12 +11754,12 @@
               {
                 "min_level": 4,
                 "max_level": 4,
-                "species": "SPECIES_HOOTHOOT"
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 4,
                 "max_level": 4,
-                "species": "SPECIES_RATTATA_ALOLA"
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 4,
@@ -11878,7 +11878,7 @@
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_KRICKETOT"
+                "species": "SPECIES_PARAS"
               },
               {
                 "min_level": 2,
@@ -11888,12 +11888,12 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_HOPPIP"
+                "species": "SPECIES_PIKIPEK"
               },
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_KRICKETOT"
+                "species": "SPECIES_PARAS"
               },
               {
                 "min_level": 3,
@@ -11903,7 +11903,7 @@
               {
                 "min_level": 3,
                 "max_level": 4,
-                "species": "SPECIES_HOPPIP"
+                "species": "SPECIES_PIKIPEK"
               },
               {
                 "min_level": 3,
@@ -11918,7 +11918,7 @@
               {
                 "min_level": 4,
                 "max_level": 4,
-                "species": "SPECIES_KRICKETOT"
+                "species": "SPECIES_PARAS"
               },
               {
                 "min_level": 4,
@@ -11928,7 +11928,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_KRICKETOT"
+                "species": "SPECIES_PARAS"
               },
               {
                 "min_level": 5,
@@ -11938,7 +11938,7 @@
             ]
           },
           "fishing_mons": {
-            "encounter_rate": 30,
+            "encounter_rate": 50,
             "mons": [
               {
                 "min_level": 1,
@@ -12078,6 +12078,95 @@
                 "min_level": 5,
                 "max_level": 5,
                 "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_POHUTU_CITY_2",
+          "base_label": "gPohutuCity_2",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_WATTREL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_CORPHISH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_KILOWATTREL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_OCTILLERY"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 1,
+                "max_level": 5,
+                "species": "SPECIES_REMORAID"
+              },
+              {
+                "min_level": 1,
+                "max_level": 5,
+                "species": "SPECIES_WISHIWASHI"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LUVDISC"
               },
               {
                 "min_level": 5,

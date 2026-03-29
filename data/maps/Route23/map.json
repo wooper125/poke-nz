@@ -28,8 +28,8 @@
     {
       "local_id": "LOCALID_ROUTE23_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
-      "x": 24,
-      "y": 47,
+      "x": 19,
+      "y": 57,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -42,10 +42,10 @@
     {
       "local_id": "LOCALID_ROUTE23_DAD",
       "graphics_id": "OBJ_EVENT_GFX_NORMAN",
-      "x": 23,
-      "y": 48,
+      "x": 19,
+      "y": 58,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -54,15 +54,7 @@
       "flag": "FLAG_HIDE_ROUTE_23_DAD"
     }
   ],
-  "warp_events": [
-    {
-      "x": 13,
-      "y": 52,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE101",
-      "dest_warp_id": "0"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": []
 }

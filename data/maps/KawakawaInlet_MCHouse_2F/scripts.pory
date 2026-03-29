@@ -2,6 +2,16 @@ mapscripts KawakawaInlet_MCHouse_2F_MapScripts {
 
 }
 
+# Kawakawa Intro States
+# 0 - Before starting the game
+# 1 - After waking up for the first time
+# 2 - After talking to Mom in the morning the first time
+# 3 - After talking to Dad about going to the festival
+# 4 - After talking to Dad at the end of the festival day
+# 5 - After talking to Dad after going through ROUTE 1
+# 6 - After sleeping and waking up the next day
+# 7 - After talking to Mom and starting the adventure
+
 script KawakawaInlet_MCHouse_2F_EventScript_SetIntroFlags {
     if (flag(FLAG_START)) {
         fwdtime(8,0) # Set the time to 8:00 AM
@@ -16,6 +26,8 @@ script KawakawaInlet_MCHouse_2F_EventScript_SetIntroFlags {
 script KawakawaInlet_MCHouse_2F_EventScript_Sleep {
     if (var(VAR_KAWAKAWA_INTRO_STATE) == 5) {
         lockall
+        applymovement(LOCALID_PLAYER, KawakawaInlet_MCHouse_2F_Movement_Sleep)
+        waitmovement(0)
         fadescreen(FADE_TO_BLACK)
         delay(50)
         fadescreen(FADE_FROM_BLACK)
@@ -56,4 +68,8 @@ script KawakawaInlet_MCHouse_2F_EventScript_Notebook {
 script KawakawaInlet_MCHouse_2F_EventScript_GameCube {
 	msgbox(PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN)
 	end
+}
+
+movement KawakawaInlet_MCHouse_2F_Movement_Sleep {
+    walk_in_place_slow_down
 }

@@ -210,8 +210,6 @@
 #define METATILE_General_CalmWater             0x170
 #define METATILE_General_CaveEntrance_Bottom   0x0A7
 #define METATILE_General_CaveEntrance_Top      0x09F
-#define METATILE_General_DeepSand_BottomMid    0x1E3
-#define METATILE_General_DeepSand_Center       0x1A2
 #define METATILE_General_Door                  0x021
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
@@ -267,8 +265,9 @@
 #define METATILE_InsideShip_IntactDoor_Bottom_Unlocked  0x22B
 
 // gTileset_Kawakawa
-#define METATILE_Kawakawa_Door_Big    0x394
-#define METATILE_Kawakawa_Door_Small  0x225
+#define METATILE_Kawakawa_Door_Fish             0x252
+#define METATILE_Kawakawa_Door_Kawakawa         0x21A
+#define METATILE_Kawakawa_Door_Kawakawa_Player  0x292
 
 // gTileset_Lavaridge
 #define METATILE_Lavaridge_AshGrass             0x207
@@ -375,6 +374,13 @@
 
 // gTileset_MossdeepGym
 #define METATILE_MossdeepGym_YellowArrow_Right  0x250
+
+// gTileset_NZ_General
+#define METATILE_NZ_General_CaveEntrance_Bottom  0x042
+#define METATILE_NZ_General_CaveEntrance_Left    0x02E
+#define METATILE_NZ_General_CaveEntrance_Right   0x04E
+#define METATILE_NZ_General_Door_PokeCenter      0x171
+#define METATILE_NZ_General_Door_PokeMart        0x175
 
 // gTileset_Pacifidlog
 #define METATILE_Pacifidlog_Door                               0x21A

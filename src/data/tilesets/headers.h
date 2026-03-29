@@ -852,3 +852,47 @@ const struct Tileset gTileset_Kauri =
     .metatileAttributes = gMetatileAttributes_Kauri,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PorytilesPrimaryTest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesPrimaryTest,
+    .palettes = gTilesetPalettes_PorytilesPrimaryTest,
+    .metatiles = gMetatiles_PorytilesPrimaryTest,
+    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
+    .callback = InitTilesetAnim_PorytilesPrimaryTutorial,
+};
+
+const struct Tileset gTileset_PorytilesSecondaryTutorial =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesSecondaryTutorial,
+    .palettes = gTilesetPalettes_PorytilesSecondaryTutorial,
+    .metatiles = gMetatiles_PorytilesSecondaryTutorial,
+    .metatileAttributes = gMetatileAttributes_PorytilesSecondaryTutorial,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_NZ_General =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_NZ_General,
+    .palettes = gTilesetPalettes_NZ_General,
+    .metatiles = gMetatiles_NZ_General,
+    .metatileAttributes = gMetatileAttributes_NZ_General,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Kauri_Town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Kauri_Town,
+    .palettes = gTilesetPalettes_Kauri_Town,
+    .metatiles = gMetatiles_Kauri_Town,
+    .metatileAttributes = gMetatileAttributes_Kauri_Town,
+    .callback = NULL,
+};

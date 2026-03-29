@@ -4416,7 +4416,7 @@
       "name": "Route1_Layout",
       "width": 82,
       "height": 28,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
@@ -4424,9 +4424,9 @@
     {
       "id": "LAYOUT_KAWAKAWA_INLET",
       "name": "KawakawaInlet_Layout",
-      "width": 44,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
+      "width": 33,
+      "height": 19,
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/KawakawaInlet/border.bin",
       "blockdata_filepath": "data/layouts/KawakawaInlet/map.bin"
@@ -4434,9 +4434,9 @@
     {
       "id": "LAYOUT_ROUTE23",
       "name": "Route23_Layout",
-      "width": 42,
-      "height": 57,
-      "primary_tileset": "gTileset_General",
+      "width": 36,
+      "height": 65,
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/Route23/border.bin",
       "blockdata_filepath": "data/layouts/Route23/map.bin"
@@ -4456,7 +4456,7 @@
       "name": "Route22_Layout",
       "width": 100,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/Route22/border.bin",
       "blockdata_filepath": "data/layouts/Route22/map.bin"
@@ -4464,9 +4464,9 @@
     {
       "id": "LAYOUT_KAURI_WOODS",
       "name": "KauriWoods_Layout",
-      "width": 54,
-      "height": 44,
-      "primary_tileset": "gTileset_General",
+      "width": 62,
+      "height": 46,
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kauri",
       "border_filepath": "data/layouts/KauriWoods/border.bin",
       "blockdata_filepath": "data/layouts/KauriWoods/map.bin"
@@ -4474,9 +4474,9 @@
     {
       "id": "LAYOUT_ROUTE1_2",
       "name": "Route1_2_Layout",
-      "width": 82,
+      "width": 83,
       "height": 36,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/Route1_2/border.bin",
       "blockdata_filepath": "data/layouts/Route1_2/map.bin"
@@ -4484,9 +4484,9 @@
     {
       "id": "LAYOUT_POHUTU_CITY_2",
       "name": "PohutuCity_2_Layout",
-      "width": 38,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
+      "width": 43,
+      "height": 35,
+      "primary_tileset": "gTileset_NZ_General",
       "secondary_tileset": "gTileset_Kawakawa",
       "border_filepath": "data/layouts/PohutuCity_2/border.bin",
       "blockdata_filepath": "data/layouts/PohutuCity_2/map.bin"
@@ -4510,6 +4510,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/KawakawaInlet_MCHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/KawakawaInlet_MCHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_TEST_MAP",
+      "name": "PorytilesTestMap_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_PorytilesSecondaryTutorial",
+      "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAURI_TOWN",
+      "name": "KauriTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_NZ_General",
+      "secondary_tileset": "gTileset_Kauri",
+      "border_filepath": "data/layouts/KauriTown/border.bin",
+      "blockdata_filepath": "data/layouts/KauriTown/map.bin"
     }
   ]
 }

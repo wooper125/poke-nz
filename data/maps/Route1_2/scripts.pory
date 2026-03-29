@@ -1,4 +1,104 @@
 mapscripts Route1_2_MapScripts {
     MAP_SCRIPT_ON_LOAD {
+        if (var(VAR_KAWAKAWA_INTRO_STATE) == 7) {
+            setflag(FLAG_HIDE_ROUTE_1_REPAIRMAN)
+        }
     }
+}
+
+# Kawakawa Intro States
+# 0 - Before starting the game
+# 1 - After waking up for the first time
+# 2 - After talking to Mom in the morning the first time
+# 3 - After talking to Dad about going to the festival
+# 4 - After talking to Dad at the end of the festival day
+# 5 - After talking to Dad after going through ROUTE 1
+# 6 - After sleeping and waking up the next day
+# 7 - After talking to Mom and starting the adventure
+
+script Route1_Repairman {
+    msgbox(Route1_Text_StopBridgeUnderRepair, MSGBOX_NPC)
+	end
+}
+
+script Route1_Trigger_BridgeRepair {
+    lockall
+    applymovement(LOCALID_ROUTE1_REPAIRMAN, Common_Movement_FaceDown)
+    waitmovement(0)
+    applymovement(LOCALID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    msgbox(Route1_Text_StopBridgeUnderRepair, MSGBOX_NPC)
+    closemessage
+    applymovement(LOCALID_PLAYER, Route1_Movement_PlayerTurnsBack)
+    applymovement(LOCALID_ROUTE1_REPAIRMAN, Common_Movement_FaceLeft)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script Route1_Joey {
+    trainerbattle_single(TRAINER_JOEY, Route1_Text_ShortsAreTheBest, Route1_Text_LostButShortsAreStillTheBest)
+    msgbox(Route1_Text_ShortsAreComfy, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script Route1_Sophia {
+    trainerbattle_single(TRAINER_SOPHIA, Route1_Text_AnnoyingShortsKid, Route1_Text_BeatSomeSenseIntoHim)
+    msgbox(Route1_Text_SkirtsAreWayBetterAnyways, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+movement Route1_Movement_PlayerTurnsBack {
+    walk_left
+}
+
+text Route1_Text_StopBridgeUnderRepair {
+    format(
+        "Sorry, but the bridge is under repair.\n"
+        "You'll have to wait for it to get fixed.$"
+    )
+}
+
+text Route1_Text_ShortsAreTheBest {
+    format(
+        "Shorts are the best!\n"
+        "I don't care what anyone says!"
+    )
+}
+
+text Route1_Text_LostButShortsAreStillTheBest {
+    format(
+        "I lost, but shorts are still the best!\n"
+        "I don't care what anyone says!"
+    )
+}
+
+text Route1_Text_ShortsAreComfy {
+    format(
+        "Shorts are comfy!\n"
+        "I don't care what anyone says!"
+    )
+}
+
+text Route1_Text_AnnoyingShortsKid {
+    format(
+        "That kid can't stop talking about shorts!\n"
+        "I wish he'd just go away!"
+    )
+}
+
+text Route1_Text_BeatSomeSenseIntoHim {
+    format(
+        "Since you beat me, maybe you can beat some sense into that kid!\n"
+        "I hope he learns his lesson!"
+    )
+}
+
+text Route1_Text_SkirtsAreWayBetterAnyways {
+    format(
+        "Skirts are way better than shorts anyways!\n"
+        "I don't care what that snotty kid says!"
+    )
 }

@@ -1,0 +1,138 @@
+mapscripts KauriWoods_MapScripts {
+}
+
+script KauriWoods_Route1Sign {
+    # a sign stating the forest's name, where it leads, and a warning about the wild Pokémon
+    lock
+    msgbox(
+        "KAURI WOODS - Leads to Kauri Town\n"
+        "Beware: Wild Bug Pokémon."
+    )
+    release
+    end
+}
+
+script KauriWoods_KauriTownSign {
+    # a sign stating the towns name and a description
+    lock
+    msgbox(
+        "KAURI WOODS - Leads to Route 1\n"
+        "Paths may be blocked by overgrown\n"
+        "vegetation."
+    )
+    release
+    end
+}
+
+script KauriWoods_Lyle {
+    trainerbattle_single(TRAINER_LYLE, KauriWoods_Text_GoBugPokemonTeam, KauriWoods_Text_ICouldntWin)
+    msgbox(KauriWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script KauriWoods_James_1 {
+    trainerbattle_single(TRAINER_JAMES_1, KauriWoods_Text_InstantlyPopularWithBugPokemon, KauriWoods_Text_CantBePopularIfILose)
+    msgbox(KauriWoods_Text_PeopleRespectYou, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script KauriWoods_Tyler {
+    trainerbattle_single(TRAINER_TYLER, KauriWoods_Text_WellBalancedTeam, KauriWoods_Text_MoreThanJustBalance)
+    msgbox(KauriWoods_Text_BalanceIsGoodBut, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script KauriWoods_Boy {
+    msgbox(KauriWoods_Text_StayOutOfTallGrass, MSGBOX_NPC)
+	end
+}
+
+script KauriWoods_TreeBoy {
+    msgbox(KauriWoods_Text_FamousKauriTree, MSGBOX_NPC)
+	end
+}
+
+text KauriWoods_Text_GoBugPokemonTeam {
+	format(
+        "I caught a whole bunch of POKéMON!\p"
+	    "Go, go, go!\n"
+	    "My BUG POKéMON team!$"
+    )
+}
+
+text KauriWoods_Text_ICouldntWin {
+    format(
+        "I have all these POKéMON,\n"
+	    "but I couldn't win…$"
+    )
+    
+}
+
+text KauriWoods_Text_ImOutOfPokeBalls {
+    format(
+        "I caught a bunch of POKéMON.\n"
+	    "Now I'm out of POKé BALLS.$"
+    )
+}
+
+text KauriWoods_Text_InstantlyPopularWithBugPokemon {
+    format(
+        "If you take BUG POKéMON to school,\n"
+        "you get to be instantly popular!$"
+    )
+}
+
+text KauriWoods_Text_CantBePopularIfILose {
+    format(
+        "I can't be popular if I lose.$"
+    )
+}
+
+text KauriWoods_Text_PeopleRespectYou {
+    format(
+        "If you have a big BUG POKéMON,\n"
+        "people respect you for it.$"
+    )
+}
+
+text KauriWoods_Text_WellBalancedTeam {
+    format(
+        "Winning is all about having a well-balanced team.\n"
+        "My team can win against anyone!$"
+    )
+}
+
+text KauriWoods_Text_MoreThanJustBalance {
+    format(
+        "I guess it's not just about balance.\n"
+        "You have to train them right, too!$"
+    )
+}
+
+text KauriWoods_Text_BalanceIsGoodBut {
+    format(
+        "Balance is good, but you also have to train them right.\n"
+        "I guess I have some work to do!$"
+    )
+}
+
+text KauriWoods_Text_StayOutOfTallGrass {
+    format(
+        "Yo, there!\n"
+        "Your POKéMON doing okay?\p"
+        "If your POKéMON are weak and you want\n"
+        "to avoid battles, you should stay out\l"
+        "of tall grass.$"
+    )
+}
+
+text KauriWoods_Text_FamousKauriTree {
+    format(
+        "This is the famous KAURI TREE.\n"
+        "It's been here for hundreds of years!\p"
+        "It's really big and really old.$"
+    )
+}

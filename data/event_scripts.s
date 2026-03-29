@@ -1181,3 +1181,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PohutuCity_PokemonCenter_1F/scripts.inc"
 
 	.include "data/maps/PohutuCity_Mart/scripts.inc"
+
+	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/KauriTown/scripts.inc"
