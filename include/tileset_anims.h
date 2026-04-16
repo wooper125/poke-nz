@@ -35,5 +35,7 @@ void InitTilesetAnim_BattlePyramid(void);
 // Our custom tileset animations:
 
 void InitTilesetAnim_PorytilesPrimaryTutorial(void);
+void InitTilesetAnim_NZGeneral(void);
+void InitTilesetAnim_Kawakawa(void);
 
 #endif // GUARD_TILESET_ANIMS_H

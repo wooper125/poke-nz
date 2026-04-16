@@ -1369,7 +1369,11 @@
     },
     {
       "id": "MAPSEC_KAURI_TOWN",
-      "name": "Kauri Town"
+      "name": "Kauri Town",
+      "x": 5,
+      "y": 12,
+      "width": 1,
+      "height": 1
     }
   ]
 }

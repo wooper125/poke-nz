@@ -161,28 +161,28 @@
   "warp_events": [
     {
       "x": 12,
-      "y": 38,
+      "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
-      "y": 38,
+      "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1_2",
       "dest_warp_id": "0"
     },
     {
       "x": 52,
-      "y": 24,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_KAURI_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 53,
-      "y": 24,
+      "y": 25,
       "elevation": 0,
       "dest_map": "MAP_KAURI_TOWN",
       "dest_warp_id": "1"

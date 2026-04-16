@@ -1188,7 +1188,7 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
 }
 
 // Our custom animation code:
-
+// tutorial anim
 const u16 gTilesetAnims_PorytilesPrimaryTutorial_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/anim/flower_red/00.4bpp");
 const u16 gTilesetAnims_PorytilesPrimaryTutorial_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/anim/flower_red/01.4bpp");
 const u16 gTilesetAnims_PorytilesPrimaryTutorial_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/anim/flower_red/02.4bpp");
@@ -1218,4 +1218,133 @@ void InitTilesetAnim_PorytilesPrimaryTutorial(void)
     sPrimaryTilesetAnimCounter = 0;
     sPrimaryTilesetAnimCounterMax = 256;
     sPrimaryTilesetAnimCallback = TilesetAnim_PorytilesPrimaryTutorial;
+}
+
+// NZ General:
+// flower
+const u16 gTilesetAnims_NZGeneral_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/flower_red/00.4bpp");
+const u16 gTilesetAnims_NZGeneral_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/flower_red/01.4bpp");
+const u16 gTilesetAnims_NZGeneral_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/flower_red/02.4bpp");
+
+const u16 *const gTilesetAnims_NZGeneral_Flower[] = {
+    gTilesetAnims_NZGeneral_Flower_Frame0,
+    gTilesetAnims_NZGeneral_Flower_Frame1,
+    gTilesetAnims_NZGeneral_Flower_Frame0,
+    gTilesetAnims_NZGeneral_Flower_Frame2
+};
+
+// water
+const u16 gTilesetAnims_NZGeneral_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/00.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/01.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/02.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/03.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/04.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/05.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/06.4bpp");
+const u16 gTilesetAnims_NZGeneral_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water/07.4bpp");
+
+const u16 *const gTilesetAnims_NZGeneral_Water[] = {
+    gTilesetAnims_NZGeneral_Water_Frame0,
+    gTilesetAnims_NZGeneral_Water_Frame1,
+    gTilesetAnims_NZGeneral_Water_Frame0,
+    gTilesetAnims_NZGeneral_Water_Frame2,
+    gTilesetAnims_NZGeneral_Water_Frame3,
+    gTilesetAnims_NZGeneral_Water_Frame4,
+    gTilesetAnims_NZGeneral_Water_Frame5,
+    gTilesetAnims_NZGeneral_Water_Frame6,
+    gTilesetAnims_NZGeneral_Water_Frame7
+};
+
+// water edge
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame0[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/00.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame1[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/01.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame2[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/02.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame3[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/03.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame4[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/04.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame5[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/05.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame6[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/06.4bpp");
+const u16 gTilesetAnims_NZGeneral_WaterInsideCorners_Frame7[] = INCBIN_U16("data/tilesets/primary/nz_general/anim/water_inside_corners/07.4bpp");
+
+const u16 *const gTilesetAnims_NZGeneral_WaterInsideCorners[] = {
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame0,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame1,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame0,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame2,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame3,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame4,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame5,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame6,
+    gTilesetAnims_NZGeneral_WaterInsideCorners_Frame7
+};
+
+static void QueueAnimTiles_NZGeneral_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_NZGeneral_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_NZGeneral_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(1)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_NZGeneral_Water(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_NZGeneral_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_NZGeneral_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(5)), 16 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_NZGeneral_WaterInsideCorners(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_NZGeneral_WaterInsideCorners);
+    AppendTilesetAnimToBuffer(gTilesetAnims_NZGeneral_WaterInsideCorners[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(21)), 4 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_NZGeneral(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_NZGeneral_Flower(timer / 16);
+    } 
+    if (timer % 16 == 1) {
+        QueueAnimTiles_NZGeneral_Water(timer / 16);
+    }
+    if (timer % 16 == 2) {
+        QueueAnimTiles_NZGeneral_WaterInsideCorners(timer / 16);
+    }
+}
+
+void InitTilesetAnim_NZGeneral(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_NZGeneral;
+}
+
+// Kawakawa:
+//waterfall
+const u16 gTilesetAnims_Kawakawa_Waterfall_Frame0[] = INCBIN_U16("data/tilesets/secondary/kawakawa/anim/waterfall/00.4bpp");
+const u16 gTilesetAnims_Kawakawa_Waterfall_Frame1[] = INCBIN_U16("data/tilesets/secondary/kawakawa/anim/waterfall/01.4bpp");
+const u16 gTilesetAnims_Kawakawa_Waterfall_Frame2[] = INCBIN_U16("data/tilesets/secondary/kawakawa/anim/waterfall/02.4bpp");
+const u16 gTilesetAnims_Kawakawa_Waterfall_Frame3[] = INCBIN_U16("data/tilesets/secondary/kawakawa/anim/waterfall/03.4bpp");
+
+const u16 *const gTilesetAnims_Kawakawa_Waterfall[] = {
+    gTilesetAnims_Kawakawa_Waterfall_Frame0,
+    gTilesetAnims_Kawakawa_Waterfall_Frame1,
+    gTilesetAnims_Kawakawa_Waterfall_Frame2,
+    gTilesetAnims_Kawakawa_Waterfall_Frame3
+};
+
+static void QueueAnimTiles_Kawakawa_Waterfall(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Kawakawa_Waterfall);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Kawakawa_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(512)), 6 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_Kawakawa(u16 timer)
+{
+    if (timer % 16 == 0) {
+        QueueAnimTiles_Kawakawa_Waterfall(timer / 16);
+    } 
+}
+
+void InitTilesetAnim_Kawakawa(void)
+{
+    sSecondaryTilesetAnimCounter = 0;
+    sSecondaryTilesetAnimCounterMax = 256;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Kawakawa;
 }

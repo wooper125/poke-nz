@@ -839,7 +839,7 @@ const struct Tileset gTileset_Kawakawa =
     .palettes = gTilesetPalettes_Kawakawa,
     .metatiles = gMetatiles_Kawakawa,
     .metatileAttributes = gMetatileAttributes_Kawakawa,
-    .callback = NULL,
+    .callback = InitTilesetAnim_Kawakawa,
 };
 
 const struct Tileset gTileset_Kauri =
@@ -883,7 +883,7 @@ const struct Tileset gTileset_NZ_General =
     .palettes = gTilesetPalettes_NZ_General,
     .metatiles = gMetatiles_NZ_General,
     .metatileAttributes = gMetatileAttributes_NZ_General,
-    .callback = NULL,
+    .callback = InitTilesetAnim_NZGeneral,
 };
 
 const struct Tileset gTileset_Kauri_Town =
